@@ -25,81 +25,40 @@ employees = {
             "Ethan Wilson":"Developer"
             }
 
-
 hr_specialists = {"trainee":[],"junior":[],"middle":[],"senior":[]}
-for employee, position in employees.items():
-    if "HR" in position:
-        if "Trainee" in position:
-            hr_specialists["trainee"].append(employee)
-        elif "Junior" in position:
-            hr_specialists["junior"].append(employee)
-        elif "Senior" in position:
-            hr_specialists["senior"].append(employee)
-        else:
-            hr_specialists["middle"].append(employee)
-print("HR Spesialists = ", hr_specialists)
-
 devops = {"trainee":[],"junior":[],"middle":[],"senior":[]}
-for employee, position in employees.items():
-    if "Devops" in position:
-        if "Trainee" in position:
-            devops["trainee"].append(employee)
-        elif "Junior" in position:
-            devops["junior"].append(employee)
-        elif "Senior" in position:
-            devops["senior"].append(employee)
-        else:
-            devops["middle"].append(employee)
-print("Devops =", devops)
-
 developers = {"trainee":[],"junior":[],"middle":[],"senior":[]}
-for employee, position in employees.items():
-    if "Developer" in position:
-        if "Trainee" in position:
-            developers["trainee"].append(employee)
-        elif "Junior" in position:
-            developers["junior"].append(employee)
-        elif "Senior" in position:
-            developers["senior"].append(employee)
-        else:
-            developers["middle"].append(employee)
-print("Developer =", developers)
-
 qa_manual = {"trainee":[],"junior":[],"middle":[],"senior":[]}
-for employee, position in employees.items():
-    if "QA Manual" in position:
-        if "Trainee" in position:
-            qa_manual["trainee"].append(employee)
-        elif "Junior" in position:
-            qa_manual["junior"].append(employee)
-        elif "Senior" in position:
-            qa_manual["senior"].append(employee)
-        else:
-            qa_manual["middle"].append(employee)
-print("QA Manual =", qa_manual)
-
 qa_automation = {"trainee":[],"junior":[],"middle":[],"senior":[]}
-for employee, position in employees.items():
-    if "QA Automation" in position:
-        if "Trainee" in position:
-            qa_automation["trainee"].append(employee)
-        elif "Junior" in position:
-            qa_automation["junior"].append(employee)
-        elif "Senior" in position:
-            qa_automation["senior"].append(employee)
-        else:
-            qa_automation["middle"].append(employee)
-print("QA Automation = ", qa_automation)
-
 managers = {"trainee":[],"junior":[],"middle":[],"senior":[]}
+
 for employee, position in employees.items():
-    if "Manager" in position:
-        if "Trainee" in position:
-            managers["trainee"].append(employee)
-        elif "Junior" in position:
-            managers["junior"].append(employee)
-        elif "Senior" in position:
-            managers["senior"].append(employee)
-        else:
-            managers["middle"].append(employee)
-print("Manager =", managers)
+    grade = ''
+    if "Trainee" in position:
+        grade = "trainee"
+    elif "Junior" in position:
+        grade = "junior"
+    elif "Senior" in position:
+        grade = "senior"
+    else:
+        grade = "middle"
+
+    if 'HR' in position:
+        hr_specialists[grade].append(employee)
+    elif 'Devops' in position:
+        devops[grade].append(employee)
+    elif 'Developer' in position:
+        developers[grade].append(employee)
+    elif 'QA Manual' in position:
+        qa_manual[grade].append(employee)
+    elif 'QA Automation' in position:
+        qa_automation[grade].append(employee)
+    elif 'Manager' in position:
+        managers[grade].append(employee)
+
+print(hr_specialists)
+print(devops)
+print(developers)
+print(qa_manual)
+print(qa_automation)
+print(managers)
