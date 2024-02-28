@@ -12,6 +12,7 @@ employees = {
             "Olivia Garcia":"Trainee Manager",
             "John Doe":"Trainee QA Manual",
             "Ava Gonzalea":"Junior Manager",
+            "Roman Kulyk":"QA Automation",
             "Isabella Flores":"HR Specialist",
             "James Lee":"Junior QA Manual",
             "Alexander Nguyen":"Manager",
@@ -56,9 +57,9 @@ for employee, position in employees.items():
     elif 'Manager' in position:
         managers[grade].append(employee)
 
-print(hr_specialists)
-print(devops)
-print(developers)
-print(qa_manual)
-print(qa_automation)
-print(managers)
+print('HR = ', hr_specialists)
+print('Devops = ', devops)
+print('Developer = ',developers)
+print('QA Manual = ', qa_manual)
+print('QA Automation = ', qa_automation)
+print('Manager = ', managers)
