@@ -5,10 +5,14 @@ then add them to dictionary.
 2 - Create a function to calculate a student's average grade. The function should take
 student's name as input and return the average grade for all subjects.
 3 - Create a function to remove a student from the dictionary. The function
-should take the student's name as input and remove them from dictionary."""
+should take the student's name as input and remove them from dictionary.
+"""
+
+
 students = {"Alice":[85, 90, 92],
             "Bob":[70, 80, 75],
             "Charlie":[60, 65, 70]}
+
 
 def func_to_add(name,*args):
     """This is a function to add student to dictionary."""
@@ -30,7 +34,7 @@ def func_to_remove(name):
 
 
 print(students) 
-func_to_add("Piotr", 40,50,60)
+func_to_add("Piotr",40,50,60)
 func_to_add("Pawel",58,58,49)
 func_to_remove("Bob")
 
