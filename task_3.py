@@ -2,8 +2,9 @@
 1 - Create a function to add a new student to the dictionary. The function
 should take the student's name and their grades for subject as input and
 then add them to dictionary.
-2 - Create a function to calculate a student's average grade. The function should 
-take student's name as input and return the average grade for all subjects.
+2 - Create a function to calculate a student's average grade. The function 
+should take student's name as input and return the average grade for all 
+subjects.
 3 - Create a function to remove a student from the dictionary. The function
 should take the student's name as input and remove them from dictionary.
 """
