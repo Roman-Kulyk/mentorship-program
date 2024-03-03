@@ -1,4 +1,4 @@
-# Functions in Python is a block of statements that return the specific task.
+# Functions in Python is a block of statements that perform the specific task.
 # A simple Python function
 def my_function():
     print("Hello from GL Ukraine!")
