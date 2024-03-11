@@ -16,7 +16,10 @@ def find_most_expensive_product():
         if inventory[k]['price']:
             prices.append(inventory[k]['price'])
     max_price = max(prices)
-    print('The most expensive product is:', max_price)
+    if inventory[k]['price'] == max_price:
+        print('The most expensive product is:')
+        print(v)
+    # Why this solution doesn't work with min?
 
 
 def find_cheapest_product():
@@ -35,9 +38,11 @@ def find_products_by_type(type):
     """This function takes a product type as an argument and prints all product
     of that type.
     """
+    products = []
     for k, v in inventory.items():
         if inventory[k]['type'] == type:
-            print(inventory[k]['name'])
+            products.append(inventory[k]['name'])
+    print(products)
 
 
 def calculate_total_quantity():
