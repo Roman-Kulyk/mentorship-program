@@ -74,8 +74,11 @@ def total_price():
     print('Total price of products is:', total_prices)
 
 
-commands_list = ['most_expensive_product', 'cheapest_product',
-                 'total_quantity', 'total_price', 'exit']
+commands_list = ['most_expensive_product', 
+                 'cheapest_product',
+                 'total_quantity', 
+                 'total_price', 
+                 'exit']
 while True:
     print('This program is intended to manage your inventory. Available commands:')
     print(commands_list)
