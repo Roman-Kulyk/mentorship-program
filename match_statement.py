@@ -1,3 +1,10 @@
+"""The match statement initialized with the match keyword creating a block and
+taking a parameter(her the name is also a parameter) and then steps down to the
+various cases using the case keyword and the pattern, for the pattern to match
+the parameter. The "_" is the wildcard character which is run when nothing is
+matched.
+"""
+
 def http_error(status):
     match status:
         case 400:
