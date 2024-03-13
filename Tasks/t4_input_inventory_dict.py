@@ -27,16 +27,38 @@ def cheapest_product():
     inventory.
     """
     prices = []
-    for k, v in inventory.items():
-        if inventory[k]['price']:
-            prices.append(inventory[k]['price'])
-        curr_min_price = prices[0]
-        for price in prices:
-            if price < curr_min_price:
-                curr_min_price = price
-                if inventory[k]['price'] == curr_min_price:
-                    print('The cheapest product is:')
-                    print(v)
+    # for k, v in inventory.items():
+    #     if inventory[k]['price']:
+    #         prices.append(inventory[k]['price'])
+    #     curr_min_price = prices[0]
+    #     for price in prices:
+    #         if price < curr_min_price:
+    #             curr_min_price = price
+    #             if inventory[k]['price'] == curr_min_price:
+    #                 print('The cheapest product is:')
+    #                 print(v)
+
+    ##### 2 #####
+    # for id, item_data in inventory.items():
+    #     if inventory[id]['price']:
+    #         prices.append(inventory[id]['price'])
+    
+    # current_min_price = min(prices)
+
+    # for id, item_data in inventory.items():
+    #     if inventory[id]['price'] == current_min_price:
+    #         print(f"The cheapest product is: {item_data}")
+
+    ##### 3 #####
+    item = 0
+    for id, item_data in inventory.items():
+        current_price = inventory[id]['price']
+        if item == 0:
+            item = item_data
+        else:
+            if current_price < item_data['price']:
+                item = item_data
+    print(f"The cheapest product is: {item}")
 
 
 def products_by_type(type):
