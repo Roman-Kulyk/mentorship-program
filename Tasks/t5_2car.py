@@ -12,7 +12,7 @@ class Car():
     def start_driving(self):
         print(f'{self.model} starts driving!')
 
-    def start_breaking(self):
+    def start_braking(self):
         print(f'{self.model} starts breaking!')
 
 
@@ -23,4 +23,4 @@ the_car.start_driving()
 
 the_car2 = Car('Audi A6', 'sedan', 5, 'TD', 2.4)
 the_car2.get_descriptive_name()
-the_car2.start_breaking()
+the_car2.start_braking()
