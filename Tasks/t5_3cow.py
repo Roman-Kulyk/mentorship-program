@@ -10,10 +10,10 @@ class Cow:
         print(self.name + " is now drinking water!")
 
     def produce_milk(self):
-        print(f'{self.name}' + " produces a lot of milk.")
+        print(f'{self.name} produces a lot of milk.')
 
     def speak(self):
-        print(f'{self.name}' + " can speak but only Mo-o-o-o!")
+        print(f'{self.name} can speak but only Mo-o-o-o!')
 
 
 Romashka = Cow('Romashka', 5)
