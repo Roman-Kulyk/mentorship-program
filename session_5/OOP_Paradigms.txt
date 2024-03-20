@@ -22,7 +22,7 @@ allows you to implement multiple methods within a class that have the same name,
 but a different set of input parameters. If I give the brew methos of the French
 press, coffee and water as input arguments, I'll get back a cup of coffee. But If
 I change the type of inputs, from coffee and water to tea leaves and water, that's
-a different set of parameters so the French pess will execute the different
+a different set of parameters so the French press will execute the different
 version of the brew method that gives me back a cup of hot tea. 
 ***Overloading a method from the same class than can take different sets of
 parameters.****
@@ -44,7 +44,7 @@ of code reuse. It means the new class automatically gets everything in the paren
 (super) class. All of it's attributes and behavior's without having to write any
 extra code.
 
-Classes
+***Classes***
 A class is the detailed description, the definition, the template of what an
 object will be. But it isn't the object itself. Once we've written a class and
 defined it we can use it to create as many object based on that class as we
@@ -52,13 +52,32 @@ want.
 Each class has a name, attributes to describe that object, and it can have
 behaviours, the things that object can do.
 
-Methods 
+***Methods***
 Are basically functions with the key difference that methods are
 defined as part of class. So they're included in any object in that class. And,
-since methods exist as part of an object, they can oly access data that is known
+since methods exist as part of an object, they can only access data that is known
 to that object.
 
-Object
+***Object***
 An object is an instance of a class. We need to create an object(or instance) of
 the class to use them. In simple terms, they are the actual world entities that
 have a state and behavior.
+
+***Super Class***
+Is a class from which another classes inheret from their attributes and methods.
+
+***Magic Methods***
+A method  that is called implicitly by Python to execute a certain operation on
+a type, such as addition. Such methods have names starting and ending with double
+underscores.
+
+***Procedure***
+a pre-defined data structure that can be called upon at any point in a program.
+It can take arguments but does not return a value.
+
+***Function***
+a pre-defined data structure that can be called upon at any point in a program.
+It can take parameters and does return a value.
+
+***Interpolation***
+the estimation of intermediate value between the precise data points.
