@@ -28,3 +28,18 @@ print(x, type(x))
 print(y, type(y))
 
 y.say_hi()
+"""Diffeerence between type and isinstance
+The difference can be seen it the following code. We see that isinstance
+returns True if we compare an object either with the class it belongs to or
+with the superclass. Whereas the equality operator only returns True, if we
+compare an objec with its own class.
+"""
+print(isinstance(x, Robot), isinstance(y, Robot))
+print(isinstance(x, PhysicianRobot))
+print(isinstance(y, PhysicianRobot))
+
+
+print(type(y) == Robot, type(y) == PhysicianRobot)
+print(type(x) == Robot, type(x) == PhysicianRobot)
+# Object type compriaons should always use isinstance() instead of comparing
+# types directly.
