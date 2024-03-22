@@ -1,3 +1,6 @@
+"""Decorators allow us to wrap another function in order to extend the behavior
+of the wrapped function, without permanently modifyint it.
+"""
 def make_pretty(func):
     def inner():
         print('I got decorated')
