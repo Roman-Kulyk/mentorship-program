@@ -1,4 +1,5 @@
-"""__new__ is a static method that's responsible for creating and
+"""
+__new__ is a static method that's responsible for creating and
 returning a new instance of the class. It takes the class as its first argument
 followed by additional arguments.
 You should use __new__ when you need to control the creation of the object. For
@@ -16,6 +17,7 @@ you might want to use __init__ to:
 -Call the objects superclass' __init__ methos.
 -Perform other initialization tasks.
 """
+# https://builtin.com/data-science/new-python
 
 
 class Person:
