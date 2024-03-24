@@ -1,12 +1,15 @@
 
 class Numbers:
+    # It is a method for creating and returning a new instance of the class
     def __new__(cls, number):
         instance = super().__new__(cls)
         return instance
 
+    # It is a method for initializing the newly created object
     def __init__(self, number):
         self.number = number
 
+    # It is a method to print a list which contains simple positive numbers
     def call(self):
         import math
         number_list = []
@@ -17,6 +20,7 @@ class Numbers:
             p += 1
         print(f'First {self.number} numbers in list are: {number_list}')
 
+    # It is a method to count summ of list numbers
     def sum_count(self):
         import math
         number_list = []
