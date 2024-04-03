@@ -15,7 +15,6 @@ def time_dec(func):
         finish_time = time.time()
         elapsed_time_secs = finish_time - start_time
         print(f"The task took {elapsed_time_secs:.4f} seconds to complete.")
-        return result
     return inner
 
 
