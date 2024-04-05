@@ -7,13 +7,26 @@ from abc import ABC
 
 
 class Animals(ABC):
-    # Here we have first OOP paradigm Abstraction to describe main animal's 
-    # function
-    def __init__(self, name, age):
-        # It is attribute's initialization
-        self._name = name  # here encapsulation is used to restrict access
-        self._age = age    # to attributes only from subclasses
+    def __init__(self, name, age=1):
+        self.__name = name
+        self.__age = age
         super().__init__()
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        self.__name = value
+
+    @property
+    def age(self):
+        return self.__age
+
+    @age.setter
+    def age(self, value):
+        self.__age = value
 
     def eat(self):
         pass
@@ -92,14 +105,14 @@ class Insects(Animals):
 
 # It is here to show that attributes are variable which can be accessed throuh
 # instances of class
-my_pet1 = Mammals('Oskar', 2.5)
+my_pet1 = Mammals('Oskar')
 my_pet2 = Fish('Goldy', 0.5)
 my_pet3 = Reptiles('Tom', 4)
 
 
-print(f"My second pet's name is {my_pet1._name}. He is {my_pet1._age} years old.")
-print(f"My second pet's name is {my_pet2._name}. He is {my_pet2._age} years old.")
-print(f"My third pet's name is {my_pet3._name}. He is {my_pet3._age} years old.")
+print(f"My second pet's name is {my_pet1.name}. He's {my_pet1.age} years old.")
+print(f"My second pet's name is {my_pet2.name}. He's {my_pet2.age} years old.")
+print(f"My third pet's name is {my_pet3.name}. He's {my_pet3.age} years old.")
 print()
 my_pet1.breathe()
 my_pet2.breathe()
