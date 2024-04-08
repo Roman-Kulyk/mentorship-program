@@ -10,6 +10,7 @@ class Animals(ABC):
     def __init__(self, name, age=1):
         self.__name = name
         self.__age = age
+        self.__total = 1000000
         super().__init__()
 
     @property
@@ -56,7 +57,7 @@ class Mammals(Animals):
         print('I like to eat grass!')
 
 
-# It is a Polymorphism paradigem which allow to us have method with the same
+# It is a Polymorphism paradigm which allow to us have method with the same
 # name in different subclasse which inhereted the method from main class
 class Reptiles(Animals):
     def move(self):
@@ -86,23 +87,6 @@ class Fish(Animals):
         print('I like to eat plankton!')
 
 
-class Birds(Animals):
-    def move(self):
-        print('I can fly!!!')
-
-
-class Amphibians(Animals):
-    pass
-
-
-class Invertebrates(Animals):
-    pass
-
-
-class Insects(Animals):
-    pass
-
-
 # It is here to show that attributes are variable which can be accessed throuh
 # instances of class
 my_pet1 = Mammals('Oskar')
@@ -128,4 +112,3 @@ my_pet3.move()
 print()
 my_pet1.reproduce()
 my_pet2.reproduce()
-my_pet3.reproduce()
