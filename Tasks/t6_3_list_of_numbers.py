@@ -1,3 +1,5 @@
+import math
+
 
 class Numbers:
     # It is a method for creating and returning a new instance of the class
@@ -10,8 +12,7 @@ class Numbers:
         self.number = number
 
     # It is a method to print a list which contains simple positive numbers
-    def call(self):
-        import math
+    def __call__(self):
         number_list = []
         p = 2
         while len(number_list) != self.number:
@@ -22,7 +23,6 @@ class Numbers:
 
     # It is a method to count summ of list numbers
     def sum_count(self):
-        import math
         number_list = []
         p = 2
         while len(number_list) != self.number:
@@ -35,10 +35,10 @@ class Numbers:
 
 # Declaration of instance of class Numbers
 x = Numbers(5)
-x.call()
+x()  # Call the instance of the classes as if they were a function
 x.sum_count()
 print()
 # Declaration of another instance of class Numbers
 y = Numbers(15)
-y.call()
+y()  # Call the instance of the classes as if they were a function
 y.sum_count()
