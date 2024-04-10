@@ -1,7 +1,7 @@
 class Animal:
     """
     This is a class that defines animals.
-    
+
     Attributes
     age:int
         age of an animal
@@ -25,12 +25,12 @@ class Animal:
         self._age = age
         self._weight = weight
 
-    def eat(self):
+    def eat(self) -> None:
         """This method describe the most neccessary function of animals body"""
         print('I can eat.')
 
     @property
-    def age(self):
+    def age(self) -> int:
         """This is a method to ..."""
         return self._age
 
@@ -39,7 +39,7 @@ class Animal:
     #     return self.age
 
     @age.setter
-    def age(self, value):
+    def age(self: object, value: int):
         """
         This is a method to set the age value to the protected attribute for
         Animal class.
@@ -47,7 +47,7 @@ class Animal:
         self._age = value
 
     @age.deleter
-    def age(self):
+    def age(self) -> None:
         """
         This is a method to set default value for age attribute for
         animals.
@@ -55,7 +55,7 @@ class Animal:
         self._age = 20
 
     @property
-    def weight(self):
+    def weight(self) -> int:
         """This is a method to ..."""
         return self._weight
 
@@ -64,7 +64,7 @@ class Animal:
     #     return self.weight
 
     @weight.setter
-    def weight(self, value):
+    def weight(self: object, value: int):
         """
         This is a method to set the weight value to the protected attribute
         for Animal class.
@@ -72,7 +72,7 @@ class Animal:
         self._weight = value
 
     @weight.deleter
-    def weight(self):
+    def weight(self) -> int:
         """
         This is a method to set default value for weight attribute for
         animals.
@@ -92,7 +92,4 @@ del cat.weight
 
 print(cat.age)
 print(cat.weight)
-#help(Animal)
 print(Animal.__doc__)
-
-
