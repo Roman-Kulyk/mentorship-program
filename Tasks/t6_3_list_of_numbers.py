@@ -11,26 +11,26 @@ class Numbers:
     def __init__(self, number):
         self.number = number
 
-    # It is a method to print a list which contains simple positive numbers
-    def __call__(self):
+    def _func(self):
         number_list = []
         p = 2
         while len(number_list) != self.number:
             if (math.factorial(p-1)+1) % p == 0:
                 number_list.append(p)
             p += 1
+        return number_list
+
+    # It is a method to print a list which contains simple positive numbers
+
+    def __call__(self):
+        number_list = self._func()
         print(f'First {self.number} numbers in list are: {number_list}')
 
     # It is a method to count summ of list numbers
     def sum_count(self):
-        number_list = []
-        p = 2
-        while len(number_list) != self.number:
-            if (math.factorial(p-1)+1) % p == 0:
-                number_list.append(p)
-            p += 1
-            amount = sum(number_list)
-        print(f"The total amount of lists numbers is: {amount}")
+        number_list = self._func()
+        amount = sum(number_list)
+        print(f'The total amount of lists numbers is; {amount}')
 
 
 # Declaration of instance of class Numbers
