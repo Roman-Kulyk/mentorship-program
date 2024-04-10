@@ -10,9 +10,8 @@ class Animals(ABC):
     def __init__(self, name, age=1):
         self.__name = name
         self.__age = age
-        self.__total = 1000000
-        super().__init__()
-
+        self.total = 1000000
+    
     @property
     def name(self):
         return self.__name
@@ -44,6 +43,9 @@ class Animals(ABC):
 
 # It's an Inheritance paradigm, all following sublasses derived from main class
 class Mammals(Animals):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
     def move(self):
         print('I can run!!!')
 
@@ -60,6 +62,10 @@ class Mammals(Animals):
 # It is a Polymorphism paradigm which allow to us have method with the same
 # name in different subclasse which inhereted the method from main class
 class Reptiles(Animals):
+
+    def __init__(self, name, age):
+        super().__init__(name, age)
+       
     def move(self):
         print('I can glide, crowl, and even jump!!!')
 
@@ -74,6 +80,9 @@ class Reptiles(Animals):
 
 
 class Fish(Animals):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
     def move(self):
         print('I can swim!!!')
 
@@ -89,9 +98,16 @@ class Fish(Animals):
 
 # It is here to show that attributes are variable which can be accessed throuh
 # instances of class
-my_pet1 = Mammals('Oskar')
+my_pet1 = Mammals('Oskar', 2)
 my_pet2 = Fish('Goldy', 0.5)
-my_pet3 = Reptiles('Tom', 4)
+my_pet3 = Reptiles('R20', 3)
+
+my_pet1.total = 53264236
+print(my_pet1.total)
+my_pet2.total = 23
+print(my_pet2.total)
+
+print(my_pet3.total)
 
 
 print(f"My second pet's name is {my_pet1.name}. He's {my_pet1.age} years old.")
