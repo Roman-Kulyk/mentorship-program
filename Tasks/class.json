@@ -1,0 +1,107 @@
+{
+    "school": {
+      "name": "Example High School",
+      "address": "123 Main Street",
+      "city": "Cityville",
+      "state": "State",
+      "postal_code": "12345",
+      "phone": "555-123-4567",
+      "website": "http://www.examplehighschool.com"
+    },
+    "students": [
+      {
+        "name": "Ivan",
+        "age": 15,
+        "grade": 10,
+        "subjects": ["mathematics", "physics", "literature"],
+        "parents": {
+          "mother": {
+            "name": "Elena",
+            "age": 42,
+            "occupation": "teacher",
+            "contact": {
+              "phone": "123-456-789",
+              "email": "elena@example.com"
+            }
+          },
+          "father": {
+            "name": "Alexey",
+            "age": 45,
+            "occupation": "engineer",
+            "contact": {
+              "phone": "987-654-321",
+              "email": "alexey@example.com"
+            }
+          }
+        },
+        "extracurricular_activities": ["chess club", "robotics club"],
+        "attendance": {
+          "september": "present",
+          "october": "present",
+          "november": "absent"
+        }
+      },
+      {
+        "name": "Sophia",
+        "age": 16,
+        "grade": 11,
+        "subjects": ["history", "biology", "art"],
+        "parents": {
+          "mother": {
+            "name": "Anna",
+            "age": 40,
+            "occupation": "artist",
+            "contact": {
+              "phone": "111-222-333",
+              "email": "anna@example.com"
+            }
+          },
+          "father": {
+            "name": "Michael",
+            "age": 48,
+            "occupation": "lawyer",
+            "contact": {
+              "phone": "444-555-666",
+              "email": "michael@example.com"
+            }
+          }
+        },
+        "extracurricular_activities": ["drama club", "environment club"],
+        "attendance": {
+          "september": "present",
+          "october": "present",
+          "november": "present"
+        }
+      }
+    ],
+    "teachers": [
+      {
+        "name": "Maria",
+        "subject": "chemistry",
+        "classroom": 102,
+        "contact": {
+          "phone": "555-123-456",
+          "email": "maria@example.com"
+        }
+      },
+      {
+        "name": "John",
+        "subject": "english",
+        "classroom": 202,
+        "contact": {
+          "phone": "555-789-123",
+          "email": "john@example.com"
+        }
+      },
+      {
+        "name": "Emily",
+        "subject": "computer science",
+        "classroom": 305,
+        "contact": {
+          "phone": "555-456-789",
+          "email": "emily@example.com"
+        }
+      }
+    ]
+  }
+  
