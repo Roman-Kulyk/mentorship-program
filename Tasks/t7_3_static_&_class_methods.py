@@ -29,29 +29,12 @@ class Person:
     def fromBirthYear(cls, name, birtYear):
         return cls(name, date.today().year - birtYear)
 
-    # @classmethod
-    # def myClassMethod1(cls):
-    #     pass
-
-    # @classmethod
-    # def myClassMethod2(cls):
-    #     pass
-
     def display(self):
         print(self.name + "'s age is: " + str(self.age))
 
     @staticmethod
     def fromFatherAge(name, fatherAge, fatherPersonAgeDiff):
         return Person(name, date.today().year - fatherAge + fatherPersonAgeDiff)
-
-    # @classmethod
-    # def myStaticMethod1(cls):
-    #     pass
-
-    # @classmethod
-    # def myStaticMethod2(cls):
-    #     pass
-
 
 class Man(Person):
     sex = 'Male'
