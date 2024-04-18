@@ -48,17 +48,17 @@ class Mammals:
         print("I can breathe only air though my lungs!")
 
     @overload
-    def eat(self: object, a: int) -> int:  # is it correct to have int here
+    def eat(self: object, a: int) -> None:  # is it correct to have int here
         """This is the method to prints what animal eats."""
         ...  # does it work as pass?
 
     @overload
-    def eat(self: object, a: float) -> float:
+    def eat(self: object, a: float) -> None:
         """This is the method to prints what animal eats."""
         ...  # does it work as pass?
 
     @overload
-    def eat(self: object, a: str) -> str:
+    def eat(self: object, a: str) -> None:
         """This is the method to prints what animal eats."""
         ...  # does it work as pass?
 
