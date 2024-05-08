@@ -1,19 +1,32 @@
 {
-    "school": {
-      "name": "Example High School",
-      "address": "123 Main Street",
-      "city": "Cityville",
-      "state": "State",
-      "postal_code": "12345",
-      "phone": "555-123-4567",
-      "website": "http://www.examplehighschool.com"
-    },
+    "schools": [
+      {
+        "name": "Example 1 High School",
+        "address": "123 Main Street",
+        "city": "Cityville",
+        "state": "State",
+        "postal_code": "12345",
+        "phone": "555-123-4567",
+        "website": "http://www.examplehighschool.com"
+      },
+      
+      {
+        "name": "Example 2 High School",
+        "address": "12 Main Street",
+        "city": "Cityville",
+        "state": "State",
+        "postal_code": "54321",
+        "phone": "555-123-4567",
+        "website": "http://www.examplehighschool.com"
+      }
+    ],
     "students": [
       {
         "name": "Ivan",
+        "school": "54321",
         "age": 15,
         "grade": 10,
-        "subjects": ["mathematics", "physics", "literature"],
+        "subjects": ["mathematics", "physics", "literature", "chemistry"],
         "parents": {
           "mother": {
             "name": "Elena",
@@ -43,9 +56,10 @@
       },
       {
         "name": "Sophia",
+        "school": "12345",
         "age": 16,
         "grade": 11,
-        "subjects": ["history", "biology", "art"],
+        "subjects": ["history", "biology", "art", "chemistry"],
         "parents": {
           "mother": {
             "name": "Anna",
@@ -77,6 +91,7 @@
     "teachers": [
       {
         "name": "Maria",
+        "postal_code": "12345",
         "subject": "chemistry",
         "classroom": 102,
         "contact": {
@@ -86,6 +101,7 @@
       },
       {
         "name": "John",
+        "postal_code": "12345",
         "subject": "english",
         "classroom": 202,
         "contact": {
@@ -94,7 +110,7 @@
         }
       },
       {
-        "name": "Emily",
+        "name": "Emily","postal_code": "54321",
         "subject": "computer science",
         "classroom": 305,
         "contact": {
