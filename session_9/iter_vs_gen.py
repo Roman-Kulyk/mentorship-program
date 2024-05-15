@@ -28,7 +28,7 @@ class Iterator():
 
     Methods
     __iter__(self)
-        Return the object itself.
+        Returns the object itself.
     __next__(self)
         Provides next item in the sequence.
     """
@@ -49,17 +49,7 @@ class Iterator():
         
 it1 = Iterator(0, 10, 1)
 # print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
-# print(next(it1))
+
 
 for i in it1:
     print(i)
@@ -78,16 +68,7 @@ def generator(n):
 gen = generator(10)
 print(gen)
 # print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
+
 
 for i in gen:
     print(i)
