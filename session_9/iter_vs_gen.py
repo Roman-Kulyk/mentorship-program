@@ -1,4 +1,4 @@
-############################
+###############################################################################
 text = 'hello'
 result = iter(text)
 
@@ -8,13 +8,30 @@ while True:
     except StopIteration:
         break
 
-#############################
+###############################################################################
 text = 'hello'
 for i in text:
     print(i)
 
-#############################
+###############################################################################
 class Iterator():
+    """
+    This is a class that itearates through sequences.
+
+    Attributes
+    number_low:int
+        starting number
+    number_high:int
+        finishing number
+    step:int
+        step for iteration
+
+    Methods
+    __iter__(self)
+        Return the object itself.
+    __next__(self)
+        Provides next item in the sequence.
+    """
     def __init__(self, number_low, number_high, step):
         self.number_low = number_low
         self.number_high = number_high
@@ -51,7 +68,7 @@ it2 = Iterator(5, 20, 4)
 
 for i in it2:
     print(i)
-#############################
+###############################################################################
 def generator(n):
     number = 0
     while number < n:
