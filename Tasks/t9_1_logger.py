@@ -136,7 +136,7 @@ class Logger():
     def log_warning(self, message) -> str:
         """This method logs warning messages into a file."""
         with open(self.logfile_name, 'a') as freading:
-            freading.write(f"{self.time_str}:'[WARNING]'{message}")
+            freading.write(f"{self.time_str}:{'[WARNING]'}{message}")
             freading.write("\n")
         self.count_warnings += 1
 
