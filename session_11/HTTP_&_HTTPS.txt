@@ -1,0 +1,20 @@
+HTTP
+
+Hypertext Transfer Protocol (HTTP) is an application-layer protocol for
+transmitting hypermedia documents, such as HTML. It was designed for
+communication between web browsers and web servers, but it can also be used for
+other purposes. HTTP follows a classical client-server model, with a client
+opening a connection to make a request, then waiting until it receives
+a response. HTTP is a stateless protocol, meaning that the server does not keep
+any data (state) between two requests.
+
+The client–server model is a distributed application structure that partitions
+tasks or workloads between the providers of a resource or service, called
+servers, and service requesters, called clients.[1] Often clients and servers
+communicate over a computer network on separate hardware, but both client and
+server may reside in the same system. A server host runs one or more server
+programs, which share their resources with clients. A client usually does not
+share any of its resources, but it requests content or service from a server.
+Clients, therefore, initiate communication sessions with servers, which await
+incoming requests. Examples of computer applications that use the
+client–server model are email, network printing, and the World Wide Web. 
