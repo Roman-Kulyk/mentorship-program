@@ -1,0 +1,42 @@
+Q_183_Part_2 
+HTTP(HTTP basics, HTTP vd HTTPS, HTTP requests types, responce codes)
+
+HTTP request methods
+
+HTTP defines a set of request methods to indicate the desired action to be
+performed for a given resource. Although they can also be nouns, these request
+ methods are sometimes referred to as HTTP verbs. Each of them implements a
+different semantic, but some common features are shared by a group of them: 
+e.g. a request method can be safe, idempotent, or cacheable.
+
+1. The GET method requests a representation of the specified resource. 
+Requests using GET should only retrieve data.
+
+2. The HEAD method asks for a response identical to a GET request, 
+but without the response body.
+
+3. The POST method submits an entity to the specified resource, often causing a
+change in state or side effects on the server.
+
+4. The PUT method replaces all current representations of the target resource
+with the request payload.
+
+5. The DELETE method deletes the specified resource.
+
+6. The CONNECT method establishes a tunnel to the server identified by the target
+resource.
+
+7. The OPTIONS method describes the communication options for the target resource.
+ 
+8. The TRACE method performs a message loop-back test along the path to the
+target resource.
+
+9. The PATCH method applies partial modifications to a resource.
+
+HTTP response status codes
+
+1. Informational responses (100 – 199)
+2. Successful responses (200 – 299)
+3. Redirection messages (300 – 399)
+4. Client error responses (400 – 499)
+5. Server error responses (500 – 599)
