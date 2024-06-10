@@ -8,6 +8,7 @@ driver = webdriver.Chrome()
 try:
     # Open webpage DuckDuckGo
     driver.get("https://duckduckgo.com")
+    print(driver.title)
 
     # Find websearch element by name
     search_input = driver.find_element("name","q")
@@ -21,11 +22,15 @@ try:
     # Provide somet time for page to be opened
     time.sleep(3)
 
-    # Check if title containg word "Selenium"
-    
+    # Check if title containg certain word
     assert "Selenium" in driver.title
+    # If assertion failed handle the error.
+except AssertionError:
+    print("Something went wrong with the title!!!")
+    # If no errors were raised execute following line of code
+else:
+    print("Test passed successfully!")
 finally:
-
     # Close browser after fininshing test
-    driver.quit()
-print("Test passed successfully!")
+    driver.close()  
+print("Browser window is closed!")
