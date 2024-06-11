@@ -13,7 +13,7 @@ try:
     # search_input = driver.find_element("name","q")
     # search_input = driver.find_element("id","id-search-field")
     # search_input = driver.find_element(By.ID,"id-search-field")
-    search_input = driver.find_element(By.CLASS_NAME,"search-field")
+    search_input = driver.find_element(By.CLASS_NAME, "search-field")
     search_input.clear()
 
     # Enter search text
@@ -21,9 +21,9 @@ try:
 
     # Emulate press the Enter button
     search_input.send_keys(Keys.RETURN)
-    
+
     print(driver.current_url)
-    
+
     # Check if title containg certain word
     assert "Python" in driver.title
     # If assertion failed handle the error.
@@ -34,5 +34,5 @@ else:
     print("Test passed successfully!")
 finally:
     # Close browser after fininshing test
-    driver.close()  
+    driver.close()
 print("Browser window is closed!")
