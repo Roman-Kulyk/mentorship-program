@@ -7,6 +7,7 @@ import pytest
 def first_entry():
     return 'a'
 
+
 # Arrange
 @pytest.fixture
 def second_entry():
