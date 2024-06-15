@@ -1,4 +1,4 @@
-# Content of conftest_1.py
+# Content of conftest.py
 import smtplib
 
 import pytest
