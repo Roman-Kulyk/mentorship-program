@@ -1,0 +1,25 @@
+HTML(Hyper Test Markup Language) is the most basic building block of the WEB.
+It defines the maning and structure of web content. Other technologies besides
+HTML are generally used to describe a web page's appearance/presentation (CSS)
+or functionality/behaviour(JavaScript).
+
+Cascading Style Sheets (CSS) is a stylesheet language used to describe the
+presentation of a document written in HTMl or XML(incrluding XML dialects such
+SVG, MathML or XHTML). CSS describes how elements should be rendered on
+screen, on paper, in speech, or on other media.
+
+JavaScript(JS) is a lightweight interpreted (or just-in-time compiled)
+programming language with first-class functions. While it is most well-known
+as the scripting language for Web pages, many non-browser environments also
+use it. JavaScript is prototype-based, multi-paradigm, single-treaded,
+dynamic language, supporting object-oriented, iperative, and declarative 
+styles.
+
+The DOM (Document Object MOdel) is an API that represents and interacts with
+any HTML or XML-based markup language document. The DOM is a document model
+loaded in the browser and representing the document as a node tree, or DOM tree,
+where each node represents part of the document.
+The DOM is one of the most-used APIs on the WEB because it allows codr running
+in abrowser to access and interact with every node in the document. Nodes can be
+created, moved, and changed. Event listeners can be added to nodes and triggered
+on the occurrence of a given event.
