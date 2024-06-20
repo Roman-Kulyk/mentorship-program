@@ -1,3 +1,8 @@
+"""In this example, the append_first_fixture is an autouse fixture. Because
+it happens automatically, both test are affected by it, even though neither
+test requested it. That doesn't mean they can't be requested though; just
+that it isn't necessary.
+"""
 # contents of test_append_2.py
 import pytest
 
