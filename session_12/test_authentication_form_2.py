@@ -16,7 +16,7 @@ def driver():
     driver.quit()
 
 
-def test_successful_auth(driver):
+def test_unsuccessful_auth(driver):
     driver.maximize_window()
     # Open certain web page
     driver.get("https://www.saucedemo.com/v1/")
@@ -44,6 +44,8 @@ def test_successful_auth(driver):
                                        "//input[@value='LOGIN']")
     # Emulate press the Enter button
     login_button.send_keys(Keys.RETURN)
-    # Use an explicit wait with an expected condition to tell when one of your
-    # login elements has gone stale
-    WebDriverWait(driver, 10).until(EC.staleness_of(user_name_input))
+    
+    # Find websearch element by ID or XPATH
+    # login_button = driver.find_element(By.ID, "login-button")
+    login_button = driver.find_element(By.XPATH,
+                                       "//h3[@data-test='error']")
