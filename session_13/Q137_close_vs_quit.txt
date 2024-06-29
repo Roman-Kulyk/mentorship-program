@@ -1,0 +1,9 @@
+close() and quit() methods
+
+The close() method is used to close the current browser window, 
+while quit()method is used to quit WebDriver and close all browser windows
+opened by it.
+
+Examples:
+driver.close() # close the current window
+driver.quit() # close all windows and quit WebDriver
