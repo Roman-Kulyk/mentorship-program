@@ -20,11 +20,11 @@ def test_unsuccessful_auth(driver):
     # Open certain web page
     driver.get("https://www.saucedemo.com/v1/")
     driver.implicitly_wait(3)
-    
     # Find websearch element by ID or XPATH
     # user_name_input = driver.find_element(By.ID, "user-name")
     user_name_input = driver.find_element(By.XPATH,
                                           "//input[@data-test='username']")
+    assert user_name_input.is_displayed()
     user_name_input.clear()
     # Enter user name
     user_name_input.send_keys("wrong_standard_user")
@@ -33,6 +33,7 @@ def test_unsuccessful_auth(driver):
     # password_input = driver.find_element(By.ID, "password")
     password_input = driver.find_element(By.XPATH,
                                          "//input[@data-test='password']")
+    assert password_input.is_displayed()
     password_input.clear()
     # Enter user name
     password_input.send_keys("secret_sauce")
@@ -41,10 +42,11 @@ def test_unsuccessful_auth(driver):
     # login_button = driver.find_element(By.ID, "login-button")
     login_button = driver.find_element(By.XPATH,
                                        "//input[@value='LOGIN']")
+    assert login_button.is_displayed()
     # Emulate press the Enter button
     login_button.send_keys(Keys.RETURN)
-    
     # Find websearch element by ID or XPATH
     # login_button = driver.find_element(By.ID, "login-button")
-    login_button = driver.find_element(By.XPATH,
+    error_message = driver.find_element(By.XPATH,
                                        "//h3[@data-test='error']")
+    assert error_message.is_displayed()

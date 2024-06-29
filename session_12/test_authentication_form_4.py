@@ -28,6 +28,7 @@ def test_unsuccessful_auth(driver):
     user_name_input.clear()
     # Enter user name
     user_name_input.send_keys("wrong_standard_user")
+    assert user_name_input.is_displayed()
 
     # Find websearch element by ID or XPATH
     # password_input = driver.find_element(By.ID, "password")
@@ -36,15 +37,17 @@ def test_unsuccessful_auth(driver):
     password_input.clear()
     # Enter user name
     password_input.send_keys("wrong_secret_sauce")
+    assert password_input.is_displayed()
 
     # Find websearch element by ID or XPATH
     # login_button = driver.find_element(By.ID, "login-button")
     login_button = driver.find_element(By.XPATH,
                                        "//input[@value='LOGIN']")
+    assert login_button.is_displayed()
     # Emulate press the Enter button
     login_button.send_keys(Keys.RETURN)
-    
     # Find websearch element by ID or XPATH
     # login_button = driver.find_element(By.ID, "login-button")
-    login_button = driver.find_element(By.XPATH,
+    error_message = driver.find_element(By.XPATH,
                                        "//h3[@data-test='error']")
+    assert error_message.is_displayed()

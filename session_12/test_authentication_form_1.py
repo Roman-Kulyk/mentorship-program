@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import StaleElementReferenceException
 
 import pytest
 
@@ -26,6 +27,7 @@ def test_successful_auth(driver):
     # user_name_input = driver.find_element(By.ID, "user-name")
     user_name_input = driver.find_element(By.XPATH,
                                           "//input[@data-test='username']")
+    assert user_name_input.is_displayed()
     user_name_input.clear()
     # Enter user name
     user_name_input.send_keys("standard_user")
@@ -34,6 +36,7 @@ def test_successful_auth(driver):
     # password_input = driver.find_element(By.ID, "password")
     password_input = driver.find_element(By.XPATH,
                                          "//input[@data-test='password']")
+    assert password_input.is_displayed()
     password_input.clear()
     # Enter user name
     password_input.send_keys("secret_sauce")
@@ -42,8 +45,14 @@ def test_successful_auth(driver):
     # login_button = driver.find_element(By.ID, "login-button")
     login_button = driver.find_element(By.XPATH,
                                        "//input[@value='LOGIN']")
+    assert login_button.is_displayed()
     # Emulate press the Enter button
     login_button.send_keys(Keys.RETURN)
     # Use an explicit wait with an expected condition to tell when one of your
-    # logine elements has gone stale
+    # login elements has gone stale
     WebDriverWait(driver, 10).until(EC.staleness_of(user_name_input))
+
+    try:
+        assert login_button.is_displayed()
+    except StaleElementReferenceException:
+        print('Login was successfull!')
