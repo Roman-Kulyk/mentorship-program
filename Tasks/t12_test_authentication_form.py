@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import StaleElementReferenceException
 
 import pytest
 
@@ -54,7 +55,13 @@ class TestLoginPage:
             # Use an explicit wait with an expected condition to tell when one
             # of your login elements has gone stale
             WebDriverWait(self.driver, 10).until(EC.staleness_of(user_name_input))
+            try:
+                assert login_button.is_displayed()
+            except StaleElementReferenceException:
+                print("Login button doesn't exist at the moment!")
+
         else:
             # Find websearch element by ID or XPATH
             error_message = self.driver.find_element(By.XPATH,
                                         "//h3[@data-test='error']")
+            assert error_message.is_displayed()
