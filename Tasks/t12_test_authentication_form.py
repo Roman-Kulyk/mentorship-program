@@ -32,6 +32,7 @@ class TestLoginPage:
         # user_name_input = self.driver.find_element(By.ID, "user-name")
         user_name_input = self.driver.find_element(By.XPATH,
                                             "//input[@data-test='username']")
+        assert user_name_input.is_displayed()
         user_name_input.clear()
         # Enter user name
         user_name_input.send_keys(user_input)
@@ -40,6 +41,7 @@ class TestLoginPage:
         # password_input = self.driver.find_element(By.ID, "password")
         password_input = self.driver.find_element(By.XPATH,
                                             "//input[@data-test='password']")
+        assert password_input.is_displayed()
         password_input.clear()
         # Enter user name
         password_input.send_keys(password)
@@ -48,6 +50,7 @@ class TestLoginPage:
         # login_button = self.driver.find_element(By.ID, "login-button")
         login_button = self.driver.find_element(By.XPATH,
                                         "//input[@value='LOGIN']")
+        assert login_button.is_displayed()
         # Emulate press the Enter button
         login_button.send_keys(Keys.RETURN)
 
