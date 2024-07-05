@@ -7,3 +7,10 @@ opened by it.
 Examples:
 driver.close() # close the current window
 driver.quit() # close all windows and quit WebDriver
+
+What are Pytest Fixtures
+Fixtures are methond in Pytest that provide a fixed baseline for test to run
+on top of. A fuxture can be used to set up preconditions for a test, or
+perform a teardown after a test is finished.
+They are defined using the @pytest.fixture  decorator in Python and can be
+passed to test functions as arguments.
