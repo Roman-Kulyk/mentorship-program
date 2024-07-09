@@ -1,0 +1,46 @@
+Desired Capabilities are a set of key-value pairs encoded as a JSON object.
+It helps QAs define basic test requirements such as operating systems, browser
+combinations, browser versions, etc. within Selenium test scripts to perform
+automated cross browser testing of web application.
+
+The DesiredCapabilitiesClass has multiple methods that let QAs specify the
+required properties regarding the desired test environments.
+
+Why do QAs need DesiredCapabilities?
+Each specific test case needs to be executed in a different environment
+(browser, mobile, or an operating system) as per the market trends. For
+example, a QA might need to test a Web-application on two different browsers
+(Chrome, Safari) installed on mobile devices running on different operating
+systems(Android, iOS).
+
+Methods in DesiredCapabilities for Selenium
+
+getCapability()
+This method helps in retrieving the capabilities of the current system on which
+the tests are being performed.
+
+setCapability()
+The setCapability() method is used to declare the properties of test environment
+like device name, operating system name, operating system versions, browser,
+and browser versions.
+
+getBrowserName()
+This method helps in retrieving the browser name of the currens system.
+
+setBrowserName()
+This method is used to set the name of the browser on which tests are to be
+executed.
+
+getVersion()
+This method helps in retrieving the version of the browser or the operating
+system of the current system used for running the tests.
+
+setVersion()
+This method helps in defining the version of the browser or the operating
+system for running the tests.
+
+getPlatform()
+This method helps in retrieving the details of the operating system.
+
+setPlatform()
+This method helps in defining the desired operating system to be used.
