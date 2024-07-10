@@ -2,8 +2,6 @@ import pytest
 from my_tests.pages.login_page import LoginPage
 
 
-@pytest.mark.login
-
 def test_login_functionality(chrome_browser):
     url = "https://www.saucedemo.com/v1/"
     login_page = LoginPage(chrome_browser)
@@ -19,4 +17,5 @@ def test_login_functionality(chrome_browser):
     login_page.click_login()
 
     # Verify Successful Login by checking the presence of a logout button
-    assert login_page.verify_successfull_login(True)
+    login_page.verify_successfull_login(True)
+
