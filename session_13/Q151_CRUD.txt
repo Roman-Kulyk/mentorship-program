@@ -25,3 +25,9 @@ Create      INSERT
 Read        SELECT 
 Update      UPDATE
 Delete      DELETE
+
+What are CRUd operations in HTTP request method?
+Create      POST
+Read        GET
+Update      PUT or PATCH
+Delete      DELETE
