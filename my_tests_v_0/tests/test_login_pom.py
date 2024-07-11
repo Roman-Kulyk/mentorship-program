@@ -44,9 +44,7 @@ def verify_successfull_login(self, is_valid):
             print("Login button doesn't exist at the moment!")
 
     else:
-        error_message = self.driver.find_element(By.XPATH,
-                                    "//h3[@data-test='error']")
-        assert error_message.is_displayed()
+        assert self.error_message.is_displayed()
     
 
     
