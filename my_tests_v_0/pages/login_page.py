@@ -2,9 +2,9 @@
 Login Page Class for https://www.saucedemo.com/v1/
 """
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import StaleElementReferenceException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+# from selenium.common.exceptions import StaleElementReferenceException
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
 # from main_page import MainPage
 
 class LoginPage:
@@ -30,18 +30,3 @@ class LoginPage:
         self.login_button = self.driver.find_element(By.XPATH,
                                         "//input[@value='LOGIN']")
         self.login_button.click()
-        
-    
-    def verify_successfull_login(self, is_valid):
-        
-        if is_valid:
-            WebDriverWait(self.driver, 10).until(EC.staleness_of(self.user_name_input))
-            try:
-                assert self.login_button.is_displayed()
-            except StaleElementReferenceException:
-                print("Login button doesn't exist at the moment!")
-
-        else:
-            error_message = self.driver.find_element(By.XPATH,
-                                        "//h3[@data-test='error']")
-            assert error_message.is_displayed()
