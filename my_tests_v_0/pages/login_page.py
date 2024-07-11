@@ -2,10 +2,6 @@
 Login Page Class for https://www.saucedemo.com/v1/
 """
 from selenium.webdriver.common.by import By
-# from selenium.common.exceptions import StaleElementReferenceException
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# from main_page import MainPage
 
 class LoginPage:
     def __init__(self, webdriver):
