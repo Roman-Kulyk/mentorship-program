@@ -1,5 +1,4 @@
 import pytest
-from selenium.webdriver.common.by import By
 from my_tests.pages.login_page import LoginPage
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait
