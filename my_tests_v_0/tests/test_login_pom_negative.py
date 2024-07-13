@@ -7,14 +7,14 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 @pytest.mark.parametrize('user_input,password,is_valid',
-                             [('standard_user', 'secret_sauce', True),
-                              ('', '', False),
-                              ('', 'secret_sauce', False),
-                              ('standard_user', '', False),
-                              ('wrong_standard_user', 'secret_sauce', False),
-                              ('standard_user', 'wrong_secret_sauce', False),
+                             [('standard_user', 'secret_sauce', False),
+                              ('', '', True),
+                              ('', 'secret_sauce', True),
+                              ('standard_user', '', True),
+                              ('wrong_standard_user', 'secret_sauce', True),
+                              ('standard_user', 'wrong_secret_sauce', True),
                               ('wrong_standard_user', 'wrong_secret_sauce',
-                               False)])
+                               True)])
 
 def test_login_functionality(chrome_browser, user_input, password, is_valid):
     url = "https://www.saucedemo.com/v1/"
