@@ -9,25 +9,32 @@ class LoginPage:
 
     
     def enter_username(self, user_input):
+        # self.user_name_input = self.driver.find_element(By.XPATH,
+        #                                     "//input[@data-test='username']")
         self.user_name_input = self.driver.find_element(By.XPATH,
-                                            "//input[@data-test='username']")
+                                            ENTER_USERNAME_XPATH)
         self.user_name_input.clear()
         self.user_name_input.send_keys(user_input)
 
 
     def enter_password(self, password):
+        # password_input = self.driver.find_element(By.XPATH,
+        #                                     "//input[@data-test='password']")
         password_input = self.driver.find_element(By.XPATH,
-                                            "//input[@data-test='password']")
+                                            ENTER_PASSWORD)
         password_input.clear()
         password_input.send_keys(password)
     
 
     def click_login(self):
+        # self.login_button = self.driver.find_element(By.XPATH,
+        #                                 "//input[@value='LOGIN']")
         self.login_button = self.driver.find_element(By.XPATH,
-                                        "//input[@value='LOGIN']")
+                                        CLICK_LOGIN)
         self.login_button.click()
 
     def error_message(self):
+        # error_message = self.driver.find_element(By.XPATH,
+        #                             "//h3[@data-test='error']")
         error_message = self.driver.find_element(By.XPATH,
-                                    "//h3[@data-test='error']")
-        
+                                    ERROR_MESSAGE)

@@ -15,8 +15,20 @@ import time
                               ('wrong_standard_user', 'wrong_secret_sauce',
                                False)])
 
-def test_login_functionality(chrome_browser, user_input, password, is_valid):
+def test_login_functionality(chrome_browser, user_input, password, is_valid) -> None:
+    """
+    This is a method to verify login functionality.
+    Parameters
+    chrome_browser:self
+    user_input:str
+               Username to log in with
+    password:str
+               Password to log in with
+    is_valid:bool
+               Variable to declare if log in s/b successfull or not
+    """
     url = "https://www.saucedemo.com/v1/"
+    # url = LOGIN_PAGE_URL
     login_page = LoginPage(chrome_browser)
     
     # Open Page
@@ -33,10 +45,15 @@ def test_login_functionality(chrome_browser, user_input, password, is_valid):
     # Verify Successful Login by checking the presence of a logout button
     login_page.verify_successfull_login(is_valid)
 
-def verify_successfull_login(self, is_valid):
-    
+def verify_successfull_login(self, is_valid) -> None:
+    """
+    This is a method to verify if was log in successfull or not.
+    Parameters
+    is_valid:bool
+             Variable to declare if log in s/b successfull or not
+    """
     if is_valid:
-        WebDriverWait(self.driver, 10).until(EC.staleness_of(self.user_name_input))
+        WebDriverWait(self.driver, 10).until(EC.staleness_of(self.login_button))
         try:
             assert self.login_button.is_displayed()
         except StaleElementReferenceException:
@@ -44,7 +61,3 @@ def verify_successfull_login(self, is_valid):
 
     else:
         assert self.error_message.is_displayed()
-    
-
-    
-    
