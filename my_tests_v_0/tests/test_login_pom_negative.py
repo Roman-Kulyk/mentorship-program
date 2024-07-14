@@ -44,7 +44,3 @@ def verify_successfull_login(self, is_valid):
 
     else:
         assert self.error_message.is_displayed()
-    
-
-    
-    

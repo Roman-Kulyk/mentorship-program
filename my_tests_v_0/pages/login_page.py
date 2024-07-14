@@ -8,7 +8,12 @@ class LoginPage:
         self.driver = webdriver
 
     
-    def enter_username(self, user_input):
+    def enter_username(self, user_input) -> None:
+        """
+        This is a method to find, clear and enter username into form
+        Parameters
+        user_input:str
+                   Username to log in with"""
         # self.user_name_input = self.driver.find_element(By.XPATH,
         #                                     "//input[@data-test='username']")
         self.user_name_input = self.driver.find_element(By.XPATH,
@@ -17,7 +22,13 @@ class LoginPage:
         self.user_name_input.send_keys(user_input)
 
 
-    def enter_password(self, password):
+    def enter_password(self, password) -> None:
+        """
+        This is a method to find, clear and enter password intor form
+        Parameters
+        password:str
+                 Password to log in with
+        """
         # password_input = self.driver.find_element(By.XPATH,
         #                                     "//input[@data-test='password']")
         password_input = self.driver.find_element(By.XPATH,
@@ -26,14 +37,16 @@ class LoginPage:
         password_input.send_keys(password)
     
 
-    def click_login(self):
+    def click_login(self) -> None:
+        """This is a method to find and click Login button on page"""
         # self.login_button = self.driver.find_element(By.XPATH,
         #                                 "//input[@value='LOGIN']")
         self.login_button = self.driver.find_element(By.XPATH,
                                         CLICK_LOGIN)
         self.login_button.click()
 
-    def error_message(self):
+    def error_message(self) -> None:
+        """This is a method to find error message on page"""
         # error_message = self.driver.find_element(By.XPATH,
         #                             "//h3[@data-test='error']")
         error_message = self.driver.find_element(By.XPATH,
