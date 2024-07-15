@@ -6,7 +6,21 @@ from selenium.webdriver.common.by import By
 class LoginPage:
     def __init__(self, webdriver):
         self.driver = webdriver
-
+    """
+        Constructs all the necessary attributes for the animal object.
+        Attributes:
+        webdriver:obj
+                  It is an object of webdriver class.
+        Methods:
+        enter_username
+            This is a method to find, clear and enter username into form
+        enter_password
+            This is a method to find, clear and enter password intor form
+        click_login
+            This is a method to find and click Login button on page
+        error_message
+            This is a method to find error message on page
+    """
     
     def enter_username(self, user_input) -> None:
         """
@@ -24,7 +38,7 @@ class LoginPage:
 
     def enter_password(self, password) -> None:
         """
-        This is a method to find, clear and enter password intor form
+        This is a method to find, clear and enter password into form
         Parameters
         password:str
                  Password to log in with
