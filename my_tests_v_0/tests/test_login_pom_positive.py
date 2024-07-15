@@ -15,7 +15,8 @@ import time
                               ('wrong_standard_user', 'wrong_secret_sauce',
                                False)])
 
-def test_login_functionality(chrome_browser, user_input, password, is_valid) -> None:
+def test_login_functionality(chrome_browser:object, user_input:str,
+                             password:str, is_valid:bool) -> None:
     """
     This is a method to verify login functionality.
     Parameters
@@ -45,7 +46,7 @@ def test_login_functionality(chrome_browser, user_input, password, is_valid) -> 
     # Verify Successful Login by checking the presence of a logout button
     login_page.verify_successfull_login(is_valid)
 
-def verify_successfull_login(self, is_valid) -> None:
+def verify_successfull_login(self, is_valid:bool) -> None:
     """
     This is a method to verify if was log in successfull or not.
     Parameters

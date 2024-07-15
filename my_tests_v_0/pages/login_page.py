@@ -22,9 +22,9 @@ class LoginPage:
             This is a method to find error message on page
     """
     
-    def enter_username(self, user_input) -> None:
+    def enter_username(self, user_input:str) -> None:
         """
-        This is a method to find, clear and enter username into form
+        This is a method to find, clear and enter username into form.
         Parameters
         user_input:str
                    Username to log in with"""
@@ -36,9 +36,9 @@ class LoginPage:
         self.user_name_input.send_keys(user_input)
 
 
-    def enter_password(self, password) -> None:
+    def enter_password(self, password:str) -> None:
         """
-        This is a method to find, clear and enter password into form
+        This is a method to find, clear and enter password into form.
         Parameters
         password:str
                  Password to log in with
@@ -52,15 +52,16 @@ class LoginPage:
     
 
     def click_login(self) -> None:
-        """This is a method to find and click Login button on page"""
+        """This is a method to find and click Login button on page."""
         # self.login_button = self.driver.find_element(By.XPATH,
         #                                 "//input[@value='LOGIN']")
         self.login_button = self.driver.find_element(By.XPATH,
                                         CLICK_LOGIN)
         self.login_button.click()
 
+
     def error_message(self) -> None:
-        """This is a method to find error message on page"""
+        """This is a method to find error message on page."""
         # error_message = self.driver.find_element(By.XPATH,
         #                             "//h3[@data-test='error']")
         error_message = self.driver.find_element(By.XPATH,
