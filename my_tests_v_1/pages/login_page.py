@@ -2,10 +2,10 @@
 Login Page Class for https://www.saucedemo.com/v1/
 """
 from selenium.webdriver.common.by import By
+from my_tests_v_1.pages.main_page import MainPage
+from my_tests_v_1.lib.locators import *
 
-class LoginPage:
-    def __init__(self, webdriver):
-        self.driver = webdriver
+class LoginPage(MainPage):
     """
         Constructs all the necessary attributes for the animal object.
         Attributes:
@@ -21,6 +21,15 @@ class LoginPage:
         error_message
             This is a method to find error message on page
     """
+    def __init__(self, webdriver):
+        """
+        This is a method to initialize instance of the LoginPage class.
+        Parameters
+        webdriver:object
+                webdriver to initialize
+        """
+        self.driver = webdriver
+    
     
     def enter_username(self, user_input:str) -> None:
         """
