@@ -32,7 +32,6 @@ def test_login_functionality(chrome_browser:object, user_input:str,
     login_page.open_page(LOGIN_PAGE_URL)
 
     # Enter Username and Password
-    
     login_page.enter_username(user_input)
     login_page.enter_password(password)
 
