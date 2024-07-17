@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from my_tests.lib.locators import *
+from my_tests.lib.constants import *
 from my_tests.pages.main_page import MainPage
 
 

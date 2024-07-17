@@ -1,6 +1,6 @@
 import pytest
 from my_tests.pages.login_page import LoginPage
-from my_tests.lib.locators import *
+from my_tests.lib.constants import *
 import time
 
 @pytest.mark.parametrize('user_input,password,is_valid',
