@@ -26,7 +26,7 @@ def test_login_functionality(chrome_browser:object, user_input:str,
     is_valid:bool
                Variable to declare if log in s/b successfull or not
     """
-    # url = LOGIN_PAGE_URL
+
     login_page = LoginPage(chrome_browser)
     # Open Page
     login_page.open_page(LOGIN_PAGE_URL)
