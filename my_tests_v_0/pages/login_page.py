@@ -2,8 +2,10 @@
 Login Page Class for https://www.saucedemo.com/v1/
 """
 from selenium.webdriver.common.by import By
+from my_tests_v_0.pages.main_page import MainPage
+from my_tests_v_0.lib.locators import *
 
-class LoginPage:
+class LoginPage(MainPage):
     def __init__(self, webdriver):
         self.driver = webdriver
     """

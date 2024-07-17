@@ -4,6 +4,9 @@ Login Page Class for https://www.saucedemo.com/v1/
 from selenium.webdriver.common.by import By
 from my_tests_v_1.pages.main_page import MainPage
 from my_tests_v_1.lib.locators import *
+from selenium.common.exceptions import StaleElementReferenceException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class LoginPage(MainPage):
     """
@@ -75,3 +78,21 @@ class LoginPage(MainPage):
         #                             "//h3[@data-test='error']")
         error_message = self.driver.find_element(By.XPATH,
                                     ERROR_MESSAGE)
+        
+
+    def verify_successfull_login(self, is_valid:bool) -> None:
+        """
+        This is a method to verify if was log in successfull or not.
+        Parameters
+        is_valid:bool
+                Variable to declare if log in s/b successfull or not
+        """
+        if is_valid:
+            WebDriverWait(self.driver, 10).until(EC.staleness_of(self.login_button))
+            try:
+                assert self.login_button.is_displayed()
+            except StaleElementReferenceException:
+                print("Login button doesn't exist at the moment!")
+
+        else:
+            assert self.error_message.is_displayed()

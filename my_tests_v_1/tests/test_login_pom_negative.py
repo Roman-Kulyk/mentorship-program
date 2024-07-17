@@ -30,18 +30,20 @@ def test_login_functionality(chrome_browser, user_input, password, is_valid):
     
     # Click Login
     login_page.click_login()
-    time.sleep(1)
+    time.sleep(3)
 
     # Verify Successful Login by checking the presence of a logout button
-    
-def verify_successfull_login(self, is_valid):
-    
-    if is_valid:
-        WebDriverWait(self.driver, 5).until(EC.staleness_of(self.login_button))
-        try:
-            assert self.login_button.is_displayed()
-        except StaleElementReferenceException:
-            print("Login button doesn't exist at the moment!")
+    login_page.verify_successfull_login(is_valid)
 
-    else:
-        assert self.error_message.is_displayed()
+
+# def verify_successfull_login(self, is_valid):
+    
+#     if is_valid:
+#         WebDriverWait(self.driver, 5).until(EC.staleness_of(self.login_button))
+#         try:
+#             assert self.login_button.is_displayed()
+#         except StaleElementReferenceException:
+#             print("Login button doesn't exist at the moment!")
+
+#     else:
+#         assert self.error_message.is_displayed()

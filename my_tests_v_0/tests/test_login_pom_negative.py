@@ -1,5 +1,5 @@
 import pytest
-from my_tests.pages.login_page import LoginPage
+from my_tests_v_0.pages.login_page import LoginPage
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -28,15 +28,17 @@ def test_login_functionality(chrome_browser, user_input, password, is_valid):
     
     # Click Login
     login_page.click_login()
-    time.sleep(3)
+    time.sleep(1)
 
     # Verify Successful Login by checking the presence of a logout button
-    login_page.verify_successfull_login(is_valid)
+    # login_page.verify_successfull_login(is_valid)
+    verify_successfull_login(is_valid)
 
 def verify_successfull_login(self, is_valid):
+
     
     if is_valid:
-        WebDriverWait(self.driver, 10).until(EC.staleness_of(self.user_name_input))
+        WebDriverWait(self.driver, 5).until(EC.staleness_of(self.user_name_input))
         try:
             assert self.login_button.is_displayed()
         except StaleElementReferenceException:
