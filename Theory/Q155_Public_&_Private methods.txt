@@ -1,0 +1,20 @@
+Public methods are those that can be accessed from anywhere 
+within or outside the class. They play a significant role in
+interacting with the class's attributes and functionality.
+These method allow external code to interact with the class's
+functionalities directly.
+
+Private methods in a Python's class are those that can only
+be accessed from inside the class. They are indicated by
+prefixing the method name with double underscore __. These
+methods are used for internal class operations, enhancing
+encapsulation and preventing accidental misuse or overriding.
+
+Protected methods are those that can only be accessed from
+incide the class and its subclasses. Protected methods are
+indicated by prefixing the method name with a single
+underscore _. Protected methods provide a way to allow
+subclasses to access certain methods while still preventing
+direct access from external code.
+
+
