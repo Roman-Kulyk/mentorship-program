@@ -72,5 +72,5 @@ class LoginPage(MainPage):
 
         else:
             error_message = self.driver.find_element(By.XPATH,
-                                        "//h3[@data-test='error']")
+                                        ERROR_MESSAGE)
             assert error_message.is_displayed()
