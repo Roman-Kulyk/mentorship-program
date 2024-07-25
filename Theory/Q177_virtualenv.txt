@@ -1,0 +1,29 @@
+The short answer is that a Python virtual environment is a folder structure
+that gives you everything you need to run a lightweight yet isolated Python
+environment.
+
+Create It
+PS> python -m venv venv
+
+Activate It
+PS> venv\Scripts\activate
+
+Install Packages Into It
+(venv) PS> python -m pip install <package-name>
+
+Deactivate It
+(venv) PS> deactivate
+
+Why Do You Need Virtual Environments?
+The short answer is that Python isn’t great at dependency management.
+If you’re not specific, then pip will place all the external packages that
+you install in a folder called site-packages/ in your base Python installation.
+
+Decide Where to Create Your Environment Folders
+A Python virtual environment is just a folder structure. You can place it 
+anywhere on your system. However, a consistent structure can help, and there
+are two prominent opinions on where to create your virtual environment 
+folders:
+
+1. Inside each individual project folder
+2. In a single location, for example in a subfolder of your home directory
