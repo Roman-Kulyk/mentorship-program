@@ -1,4 +1,5 @@
 import pytest
+from my_tests.lib.constants import *
 from my_tests_v_0.pages.login_page import LoginPage
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait
@@ -16,7 +17,7 @@ import time
                                False)])
 
 def test_login_functionality(chrome_browser:object, user_input:str,
-                             password:str, is_valid:bool) -> None:
+                             password:str) -> None:
     """
     This is a method to verify login functionality.
     Parameters
@@ -25,11 +26,8 @@ def test_login_functionality(chrome_browser:object, user_input:str,
                Username to log in with
     password:str
                Password to log in with
-    is_valid:bool
-               Variable to declare if log in s/b successfull or not
     """
-    url = "https://www.saucedemo.com/v1/"
-    # url = LOGIN_PAGE_URL
+    url = LOGIN_PAGE_URL
     login_page = LoginPage(chrome_browser)
     
     # Open Page
@@ -44,8 +42,6 @@ def test_login_functionality(chrome_browser:object, user_input:str,
     time.sleep(1)
 
     # Verify Successful Login by checking the presence of a logout button
-    # login_page.verify_successfull_login(is_valid)
-
 def verify_successfull_login(self, is_valid:bool) -> None:
 
     """
@@ -63,5 +59,3 @@ def verify_successfull_login(self, is_valid:bool) -> None:
 
     else:
         assert self.error_message.is_displayed()
-
-    verify_successfull_login(self, is_valid)
