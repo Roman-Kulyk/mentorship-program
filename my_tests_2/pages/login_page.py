@@ -1,9 +1,6 @@
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import StaleElementReferenceException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from my_tests.lib.constants import *
-from my_tests.pages.main_page import MainPage
+from my_tests_2.lib.constants import *
+from my_tests_2.pages.main_page import MainPage
 
 
 class LoginPage(MainPage):
@@ -56,21 +53,4 @@ class LoginPage(MainPage):
         error_message = self.driver.find_element(By.XPATH,
                                     ERROR_MESSAGE)
 
-    def verify_successfull_login(self, is_valid):
-        """
-        This is a method to verify if was log in successfull or not.
-        Parameters
-        is_valid:bool
-            Variable to declare if log in s/b successfull or not
-        """
-        if is_valid:
-            WebDriverWait(self.driver, 10).until(EC.staleness_of(self.user_name_input))
-            try:
-                assert self.login_button.is_displayed()
-            except StaleElementReferenceException:
-                print("Login button doesn't exist at the moment!")
 
-        else:
-            error_message = self.driver.find_element(By.XPATH,
-                                        ERROR_MESSAGE)
-            assert error_message.is_displayed()

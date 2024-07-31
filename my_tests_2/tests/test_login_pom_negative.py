@@ -1,5 +1,8 @@
 import pytest
-from my_tests.pages.login_page import LoginPage
+from my_tests.pages.login_page import *
+from selenium.common.exceptions import StaleElementReferenceException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from my_tests.lib.constants import *
 import time
 
@@ -40,5 +43,26 @@ def test_login_functionality(chrome_browser:object, user_input:str,
     time.sleep(1)
 
     # Verify Successful Login by checking the presence of a logout button
-    login_page.verify_successfull_login(is_valid)
+    verify_successfull_login(chrome_browser, is_valid, login_page.user_name_input,
+                             login_page.login_button)
 
+
+def verify_successfull_login(driver, is_valid, user_name_input, login_button):
+    """ 
+    This is a method to verify if was log in successfull or not.
+    Parameters
+    is_valid:bool
+        Variable to declare if log in s/b successfull or not
+    """
+
+    if is_valid:
+        WebDriverWait(driver, 10).until(EC.staleness_of(user_name_input))
+        try:
+            assert login_button.is_displayed()
+        except StaleElementReferenceException:
+            print("Login button doesn't exist at the moment!")
+
+    else:
+        error_message = driver.find_element(By.XPATH,
+                                    ERROR_MESSAGE)
+        assert error_message.is_displayed()

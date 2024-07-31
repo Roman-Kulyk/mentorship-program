@@ -1,4 +1,4 @@
-from my_tests_v_0.lib.locators import *
+from my_tests_2.lib.constants import *
 
 
 class MainPage:
