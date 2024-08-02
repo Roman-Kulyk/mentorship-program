@@ -3,18 +3,18 @@ from my_tests.pages.login_page import LoginPage
 from my_tests.lib.constants import *
 import time
 
-@pytest.mark.parametrize('user_input,password,is_valid',
-                             [('standard_user', 'secret_sauce', False),
-                              ('', '', True),
-                              ('', 'secret_sauce', True),
-                              ('standard_user', '', True),
-                              ('wrong_standard_user', 'secret_sauce', True),
-                              ('standard_user', 'wrong_secret_sauce', True),
-                              ('wrong_standard_user', 'wrong_secret_sauce',
-                               True)])
 
-def test_login_functionality(chrome_browser:object, user_input:str,
-                             password:str, is_valid:bool) -> None:
+@pytest.mark.parametrize('user_input,password,is_valid',
+                             [('standard_user', 'secret_sauce', True),
+                              ('', '', False),
+                              ('', 'secret_sauce', False),
+                              ('standard_user', '', False),
+                              ('wrong_standard_user', 'secret_sauce', False),
+                              ('standard_user', 'wrong_secret_sauce', False),
+                              ('wrong_standard_user', 'wrong_secret_sauce',
+                               False)])
+def test_login_functionality(chrome_browser: object, user_input: str,
+                             password: str, is_valid: bool) -> None:
     """
     This is a method to verify login functionality.
     Parameters
@@ -41,4 +41,3 @@ def test_login_functionality(chrome_browser:object, user_input:str,
 
     # Verify Successful Login by checking the presence of a logout button
     login_page.verify_successfull_login(is_valid)
-
