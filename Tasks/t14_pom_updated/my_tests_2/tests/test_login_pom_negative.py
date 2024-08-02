@@ -6,18 +6,18 @@ from selenium.webdriver.support import expected_conditions as EC
 from my_tests_2.lib.constants import *
 import time
 
-@pytest.mark.parametrize('user_input,password,is_valid',
-                             [('standard_user', 'secret_sauce', True),
-                              ('', '', False),
-                              ('', 'secret_sauce', False),
-                              ('standard_user', '', False),
-                              ('wrong_standard_user', 'secret_sauce', False),
-                              ('standard_user', 'wrong_secret_sauce', False),
-                              ('wrong_standard_user', 'wrong_secret_sauce',
-                               False)])
 
-def test_login_functionality(chrome_browser:object, user_input:str,
-                             password:str, is_valid:bool) -> None:
+@pytest.mark.parametrize('user_input,password,is_valid',
+                             [('standard_user', 'secret_sauce', False),
+                              ('', '', True),
+                              ('', 'secret_sauce', True),
+                              ('standard_user', '', True),
+                              ('wrong_standard_user', 'secret_sauce', True),
+                              ('standard_user', 'wrong_secret_sauce', True),
+                              ('wrong_standard_user', 'wrong_secret_sauce',
+                               True)])
+def test_login_functionality(chrome_browser: object, user_input: str,
+                             password: str, is_valid: bool) -> None:
     """
     This is a method to verify login functionality.
     Parameters
@@ -48,7 +48,7 @@ def test_login_functionality(chrome_browser:object, user_input:str,
 
 
 def verify_successfull_login(driver, is_valid, user_name_input, login_button):
-    """ 
+    """
     This is a method to verify if was log in successfull or not.
     Parameters
     is_valid:bool
