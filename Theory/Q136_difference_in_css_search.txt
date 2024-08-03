@@ -1,0 +1,4 @@
+Difference between * and ^ in css search strategy?
+
+The universal selector, denoted with an asterisk(*), is a special
+type selector that selects all elements.

@@ -52,5 +52,3 @@ class LoginPage(MainPage):
         """This is a method to find error message on page."""
         error_message = self.driver.find_element(By.XPATH,
                                     ERROR_MESSAGE)
-
-
