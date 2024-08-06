@@ -21,7 +21,7 @@ class MainPage:
                 webdriver to initialize
         """
 
-    def open_page(self, LOGIN_PAGE_URL):
+    def open_page(self, url):
         # Open certain web page
-        self.driver.get(LOGIN_PAGE_URL)
+        self.driver.get(url)
         self.driver.implicitly_wait(3)
