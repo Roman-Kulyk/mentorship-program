@@ -4,6 +4,34 @@ from my_tests_1.pages.main_page import MainPage
 
 
 class InventoryPage(MainPage):
+    """
+    Constructs all the necessary attributes for the InventoryPage object.
+    Attributes:
+    driver:obj
+                It is an object of webdriver class.
+    Methods:
+    __init__
+        This is a method to initialize instance of the LoginPage class.
+    select_item
+        This is a method to select proper item
+    add_to_cart
+        This is a method to add item to the cart
+    go_to_product_page_link
+        This is a method to to to product page
+    side_bar
+        This is a method to define side gamgurger menu
+    cart_button
+        This is a method to define cart button
+    """
+    
+    def __init__(self, driver):
+        """
+        This is a method to initialize instance of the MainPage class.
+        Parameters
+        webdriver:object
+                webdriver to initialize
+        """
+        super().__init__(driver)
     
     def sl_backpack(self):
         price = 29.99

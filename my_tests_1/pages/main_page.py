@@ -10,18 +10,20 @@ class MainPage:
     Methods:
     __init__
         This is a method to initialize instance of the LoginPage class.
-    enter_username
+    open_page
+        This is a method to open a certain web page.
     """
     def __init__(self, webdriver):
-        self.driver = webdriver
         """
-        This is a method to initialize instance of the LoginPage class.
+        This is a method to initialize instance of the MainPage class.
         Parameters
         webdriver:object
                 webdriver to initialize
         """
+        self.driver = webdriver
+        
 
     def open_page(self, url):
-        # Open certain web page
+        """This is a method to open a certain web page."""
         self.driver.get(url)
         self.driver.implicitly_wait(3)

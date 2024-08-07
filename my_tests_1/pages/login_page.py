@@ -16,6 +16,14 @@ class LoginPage(MainPage):
     error_message
         This is a method to find error message on page
     """
+    def __init__(self, driver):
+        """
+        This is a method to initialize instance of the LoginPage class.
+        Parameters
+        webdriver:object
+                webdriver to initialize
+        """
+        super().__init__(driver)
 
     def enter_username(self, user_input: str) -> None:
         """
