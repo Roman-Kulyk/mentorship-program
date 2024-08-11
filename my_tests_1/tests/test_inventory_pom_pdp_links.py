@@ -37,11 +37,11 @@ def test_pdp_links(chrome_browser:object, user_input:str,
     
     # Click all product page links
     pdp_links = ["item_0_title_link",
-                           "item_1_title_link",
-                           "item_2_title_link",
-                           "item_3_title_link",
-                           "item_4_title_link",
-                           "item_5_title_link"]
+                 "item_1_title_link",
+                 "item_2_title_link",
+                 "item_3_title_link",
+                 "item_4_title_link",
+                 "item_5_title_link"]
     
     for pdp in pdp_links:
         inventory_page.go_to_pdp_link(pdp)
