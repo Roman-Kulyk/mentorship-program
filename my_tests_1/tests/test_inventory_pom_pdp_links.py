@@ -44,7 +44,7 @@ def test_pdp_links(chrome_browser:object, user_input:str,
                            "item_5_title_link"]
     
     for pdp in pdp_links:
-        inventory_page.go_to_product_page_link(pdp)
+        inventory_page.go_to_pdp_link(pdp)
         time.sleep(1)
         driver.back()
 
