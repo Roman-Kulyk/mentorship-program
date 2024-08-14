@@ -5,10 +5,15 @@ ENTER_USERNAME_XPATH = "//input[@data-test='username']"
 ENTER_PASSWORD = "//input[@data-test='password']"
 CLICK_LOGIN = "//input[@value='LOGIN']"
 ERROR_MESSAGE = "//h3[@data-test='error']"
-
+#===============================================================================
 # Inventory page
-SHOPPING_CART_PAGE = "//span[@class = 'fa-layers-counter shopping_cart_badge']"
-
+SC_BADGE = "//span[@class = 'fa-layers-counter shopping_cart_badge']"
+SLL_0 = "item_0_title_link"
+SLL_1 = "item_1_title_link"
+SLL_2 = "item_2_title_link"
+SLL_3 = "item_3_title_link"
+SLL_4 = "item_4_title_link"
+SLL_5 = "item_5_title_link"
 #===============================================================================
 # Procuct cards
 

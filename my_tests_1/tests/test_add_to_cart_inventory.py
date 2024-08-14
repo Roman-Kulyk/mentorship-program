@@ -5,6 +5,7 @@ from my_tests_1.pages.product_page import *
 from my_tests_1.pages.cart_page import *
 import time
 
+
 @pytest.mark.parametrize('user_input,password',
                              [('standard_user', 'secret_sauce'),])
 
@@ -48,12 +49,15 @@ def test_login_functionality(chrome_browser:object, user_input:str,
         inventory_page.add_to_cart_pdp(ADD_TO_CART_PDP)
         time.sleep(1)
     
-        inventory_page.cart_button(CART_BUTTON)
+        inventory_page.sc_button(CART_BUTTON)
         # return back to the inventory page
         cart_page.continue_shopping(CONTINUE_SHOPPING)
         time.sleep(1)
 
-    inventory_page.cart_button(CART_BUTTON)
+    inventory_page.sc_button(CART_BUTTON)
+    # verify if the number of products on badge equal to number of added items
+    assert inventory_page.sc_number(SC_BADGE) == len(pdp_links)
+       
     cart_page.checkout(CHECKOUT)
     time.sleep(3)
     driver.back

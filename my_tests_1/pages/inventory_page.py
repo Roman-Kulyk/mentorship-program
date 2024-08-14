@@ -22,6 +22,8 @@ class InventoryPage(MainPage):
         This is a method to define side gamgurger menu
     cart_button
         This is a method to define cart button
+    cart_button_number
+        This is a method to define quantity of products in cart
     """
     
     def __init__(self, driver):
@@ -42,13 +44,19 @@ class InventoryPage(MainPage):
         """This is a method to define how to move to pdp."""
         self.inventory_item_name = self.driver.find_element(By.XPATH, locator) 
         self.inventory_item_name.click()
-        
-    def cart_button(self, locator):
-        """This is a method to define how to move to cart."""
-        self.shopping_cart_container = self.driver.find_element(By.XPATH, locator)
-        self.shopping_cart_container.click()
 
     def add_to_cart_pdp(self, locator):
         """This method defines adding product to cart from pdp."""
         add_to_cart_button = self.driver.find_element(By.XPATH,locator)
         add_to_cart_button.click()
+
+    def sc_button(self, locator):
+        """This is a method to define how to move to cart."""
+        self.sc_container = self.driver.find_element(By.XPATH, locator)
+        self.sc_container.click()
+
+    def sc_number(self, locator):
+        """This is a method to define quantity of products in cart."""
+        self.sc_badge = self.driver.find_element(By.XPATH, locator)
+        text = self.sc_badge.text
+        return int(text)

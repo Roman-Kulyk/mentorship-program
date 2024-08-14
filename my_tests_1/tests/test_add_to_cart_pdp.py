@@ -36,14 +36,8 @@ def test_add_to_cart_pdp(chrome_browser:object, user_input:str,
     time.sleep(1)
         
     inventory_page = InventoryPage(driver)
-    # Click all product page links
-    pdp_links = ["item_0_title_link",
-                 "item_1_title_link",
-                 "item_2_title_link",
-                 "item_3_title_link",
-                 "item_4_title_link",
-                 "item_5_title_link",]
     
+    pdp_links =[SLL_0, SLL_1, SLL_2, SLL_3, SLL_4, SLL_5]
     cart_page = CartPage(driver)
     product_page = ProductPage(driver)
     
@@ -55,12 +49,15 @@ def test_add_to_cart_pdp(chrome_browser:object, user_input:str,
         product_page.add_to_cart_pdp(ADD_TO_CART_PDP)
         time.sleep(1)
         
-        inventory_page.cart_button(CART_BUTTON)
+        inventory_page.sc_button(CART_BUTTON)
         # return back to the inventory page
         cart_page.continue_shopping(CONTINUE_SHOPPING)
         time.sleep(1)
 
-    inventory_page.cart_button(CART_BUTTON)
+    inventory_page.sc_button(CART_BUTTON)
+    # verify if the number of products on badge equal to number of added items
+    assert inventory_page.sc_number(SC_BADGE) == len(pdp_links)
+    
     cart_page.checkout(CHECKOUT)
     time.sleep(3)
     driver.back
