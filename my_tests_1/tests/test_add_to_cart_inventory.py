@@ -1,6 +1,8 @@
 import pytest
 from my_tests_1.pages.login_page import *
 from my_tests_1.pages.inventory_page import *
+from my_tests_1.pages.product_page import *
+from my_tests_1.pages.cart_page import *
 import time
 
 @pytest.mark.parametrize('user_input,password',
@@ -33,6 +35,25 @@ def test_login_functionality(chrome_browser:object, user_input:str,
     time.sleep(3)
         
     inventory_page = InventoryPage(driver)
-    # Click Cart button
-    inventory_page.cart_button()
+    
+    pdp_links = [SL_1, SL_2, SL_3, SL_4, SL_5, SL_6]
+    
+    cart_page = CartPage(driver)
+
+    for pdp in pdp_links:
+        # go to product page
+        inventory_page.go_to_pdp_link(pdp)
+        time.sleep(1)
+        # add product to cart
+        inventory_page.add_to_cart_pdp(ADD_TO_CART_PDP)
+        time.sleep(1)
+    
+        inventory_page.cart_button(CART_BUTTON)
+        # return back to the inventory page
+        cart_page.continue_shopping(CONTINUE_SHOPPING)
+        time.sleep(1)
+
+    inventory_page.cart_button(CART_BUTTON)
+    cart_page.checkout(CHECKOUT)
     time.sleep(3)
+    driver.back

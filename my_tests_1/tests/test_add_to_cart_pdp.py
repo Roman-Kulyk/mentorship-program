@@ -46,11 +46,12 @@ def test_add_to_cart_pdp(chrome_browser:object, user_input:str,
     
     cart_page = CartPage(driver)
     product_page = ProductPage(driver)
+    
     for pdp in pdp_links:
         # go to product page
-        inventory_page.go_to_pdp_link(pdp)
+        product_page.go_to_pdp_link(pdp)
         time.sleep(1)
-        # add product to cart
+        # add product to cart from pdp
         product_page.add_to_cart_pdp(ADD_TO_CART_PDP)
         time.sleep(1)
         
