@@ -16,14 +16,16 @@ class InventoryPage(MainPage):
         This is a method to select proper item
     add_to_cart
         This is a method to add item to the cart
-    go_to_product_page_link
+    go_to_pdp_link
         This is a method to to to product page
     side_bar
         This is a method to define side gamgurger menu
-    cart_button
+    sc_button
         This is a method to define cart button
-    cart_button_number
+    sc_number
         This is a method to define quantity of products in cart
+    bm_button
+        This is a method to define burger menu button
     """
     
     def __init__(self, driver):
@@ -32,11 +34,6 @@ class InventoryPage(MainPage):
         Parameters
         webdriver:object
                 webdriver to initialize
-        Methods
-        go_to_pdp_link
-            This is a method to define how to move to pdp.
-        cart_button
-            This is a method to define how to move to cart.
         """
         super().__init__(driver)
     
@@ -60,3 +57,18 @@ class InventoryPage(MainPage):
         self.sc_badge = self.driver.find_element(By.XPATH, locator)
         text = self.sc_badge.text
         return int(text)
+    
+    def bm_button(self, locator):
+        """This is a method to define bm_button."""
+        self.bur_m_button = self.driver.find_element(By.XPATH, locator)
+        self.bur_m_button.click()
+
+    def bm_cross_button(self, locator):
+       """This is a method to define bm_cross_button"""
+       self.bur_cross_button = self.driver.find_element(By.XPATH, locator)
+       self.bur_cross_button.click()
+
+    def bm_item(self, text):
+        """This is a method to define bm items"""
+        self.bur_item = self.driver.find_element(By.ID, text)
+        self.bur_item.click()

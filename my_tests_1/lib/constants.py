@@ -14,6 +14,13 @@ SLL_2 = "item_2_title_link"
 SLL_3 = "item_3_title_link"
 SLL_4 = "item_4_title_link"
 SLL_5 = "item_5_title_link"
+
+BM_BUTTON = "//div[@class = 'bm-burger-button']"
+BM_CROSS_BUTTON = "//div[@class = 'bm-cross-button']"
+MI_1 = "inventory_sidebar_link"
+MI_2 = "about_sidebar_link"
+MI_3 = "logout_sidebar_link"
+MI_4 = "reset_sidebar_link"
 #===============================================================================
 # Procuct cards
 
