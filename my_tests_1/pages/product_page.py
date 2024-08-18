@@ -43,8 +43,7 @@ class ProductPage(MainPage):
         """This method defines removing item from cart through pdp.""" 
         remove_button = self.driver.find_element(By.XPATH, locator)   
         remove_button.click()
-
-        
+    
     def back_button_pdp(self, locator):
         """This method defines back button functionality of pdp. """    
         self.back_button_pdp = self.driver.find_element(By.XPATH, locator)

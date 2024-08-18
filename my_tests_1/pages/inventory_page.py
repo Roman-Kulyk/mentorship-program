@@ -47,6 +47,11 @@ class InventoryPage(MainPage):
         add_to_cart_button = self.driver.find_element(By.XPATH,locator)
         add_to_cart_button.click()
 
+    def remove_pdp(self, locator):
+        """This method defines removing item from cart through pdp.""" 
+        remove_button = self.driver.find_element(By.XPATH, locator)   
+        remove_button.click()
+        
     def sc_button(self, locator):
         """This is a method to define how to move to cart."""
         self.sc_container = self.driver.find_element(By.XPATH, locator)
