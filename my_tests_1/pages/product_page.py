@@ -44,14 +44,7 @@ class ProductPage(MainPage):
         remove_button = self.driver.find_element(By.XPATH, locator)   
         remove_button.click()
     
-    def back_button_pdp(self, locator):
+    def back_pdp(self, locator):
         """This method defines back button functionality of pdp. """    
         self.back_button_pdp = self.driver.find_element(By.XPATH, locator)
-        # attempts = 3
-        # for _ in range(attempts):
-        #     try:
-        #         self.back_button_pdp.click()
-        #         break
-        #     except ElementClickInterceptedException:
-        #         sleep(2)
         self.back_button_pdp.click()
