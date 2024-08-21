@@ -1,0 +1,13 @@
+TEST DESIGN is a process that defines how testing has to be done. It involves
+the process of identifying the testing techniques, test scenarios, test cases,
+test data, and expected test results. Also, testers need to be specific about
+the test cases they create, such as providing specific inputs, steps, and test
+data for each test case.
+
+Test design includes the following major activities:
+- designing and prioritizing test cases and sets of test cases;
+- identifying necessary tes data to support tes conditions and tes cases;
+- designing the test environment and identifying any required infrastructure
+and tools;
+- capturing bi-directional traceability between the test basis, test conditions,
+and test cases.

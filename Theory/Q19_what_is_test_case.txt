@@ -1,0 +1,19 @@
+A TEST CASE is a set of actions performed on a system to determine if it
+satisfies software requirements and functions correctly. The purpose of a test
+case is to determine if different features within- a system are performing as
+expected and to confirm that the system satisfies all related standards,
+guidelines and customer requirements. The process of writing a test case can
+also help reveal errors or defectes within the system.
+
+A test case document includes test steps, test data, preconditions and postcondi
+tions to verify requirements.
+The components of a test case include:
+- test name;
+- test ID;
+- Objective(description);
+- References;
+- Prerequisites;
+- Test setup;
+- Test steps;
+- Expected results;
+- Actual results.
