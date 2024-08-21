@@ -7,11 +7,12 @@ from my_tests_1.pages.chp_1_page import *
 import time
 
 
-@pytest.mark.parametrize('user_input,password',
-                             [('standard_user', 'secret_sauce'),])
+@pytest.mark.parametrize('user_input,password,first_name,last_name,postal_code',
+                        [('standard_user','secret_sauce','R2','D2','07800'),])
 
 def test_happy_path(chrome_browser:object, user_input:str,
-                             password:str) -> None:
+                             password:str, first_name:str,
+                             last_name:str, postal_code:str) -> None:
     """
     This is a method to verify adding product to cart from pdp.
     Parameters
@@ -57,9 +58,9 @@ def test_happy_path(chrome_browser:object, user_input:str,
     cart_page.checkout(CHECKOUT)
     time.sleep(1)
     chp_1 = CheckoutPage1(driver)
-    chp_1.enter_first_name('R2')
-    chp_1.enter_last_name('D2')
-    chp_1.enter_postal_code('07800')
+    chp_1.enter_first_name(first_name)
+    chp_1.enter_last_name(last_name)
+    chp_1.enter_postal_code(postal_code)
     time.sleep(1)
     chp_1.click_continue()
     time.sleep(3)

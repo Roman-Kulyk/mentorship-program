@@ -41,7 +41,7 @@ class CheckoutPage1(MainPage):
         self.last_name_input.clear()
         self.last_name_input.send_keys(last_name)
 
-    def enter_postal_code(self, last_name: str) -> None:
+    def enter_postal_code(self, postal_code: str) -> None:
         """
         This is a method to find, clear and postal code into form.
         Parameters
@@ -50,7 +50,7 @@ class CheckoutPage1(MainPage):
         """
         self.postal_code_input = self.driver.find_element(By.XPATH, ZIP)
         self.postal_code_input.clear()
-        self.postal_code_input.send_keys(last_name)
+        self.postal_code_input.send_keys(postal_code)
 
     def click_continue(self) -> None:
         """This is a method to find and click CONTINUE button on page."""
