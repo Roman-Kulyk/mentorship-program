@@ -47,3 +47,21 @@ CART_BUTTON = "//div[@id = 'shopping_cart_container']"
 #===============================================================================
 CONTINUE_SHOPPING = "//a[@class = 'btn_secondary']"
 CHECKOUT = "//a[@class = 'btn_action checkout_button']"
+
+# Checkout page_1
+#===============================================================================
+FIRST_NAME = "//input[@data-test='firstName']"
+LAST_NAME = "//input[@data-test='lastName']"
+ZIP = "//input[@data-test='postalCode']"
+CHP_1_CANCEL = "//a[@class = 'cart_cancel_link btn_secondary']"
+CONTINUE = "//input[@class = 'btn_primary cart_button']"
+CHP_1_ERROR_MESSAGE = "//h3[@data-test='error']"
+
+# Checkout page_2
+#===============================================================================
+CHP_2_CANCEL = "//a[@class = 'cart_cancel_link btn_secondary']"
+FINISH = "//a[@class = 'btn_action cart_button]"
+
+# Checkout page_3
+#===============================================================================
+PONY_EXPRESS = "//img[@class = 'pony_express']"
