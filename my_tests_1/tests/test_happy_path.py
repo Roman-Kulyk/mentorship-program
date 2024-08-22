@@ -4,6 +4,8 @@ from my_tests_1.pages.inventory_page import *
 from my_tests_1.pages.product_page import *
 from my_tests_1.pages.cart_page import *
 from my_tests_1.pages.chp_1_page import *
+from my_tests_1.pages.chp_2_page import *
+from my_tests_1.pages.chp_3_page import *
 import time
 
 
@@ -33,7 +35,7 @@ def test_happy_path(chrome_browser:object, user_input:str,
     login_page.enter_password(password)
     # Click Login
     login_page.click_login()
-    time.sleep(1)
+    time.sleep(0.5)
         
     inventory_page = InventoryPage(driver)
     
@@ -44,23 +46,31 @@ def test_happy_path(chrome_browser:object, user_input:str,
     for pdp in pdp_links:
         # go to product page
         product_page.go_to_pdp_link(pdp)
-        time.sleep(1)
+        time.sleep(0.5)
         # add product to cart from pdp
         product_page.add_to_cart_pdp(ADD_TO_CART_PDP)
-        time.sleep(1)
+        time.sleep(0.5)
         driver.back()
-        time.sleep(1)
+        time.sleep(0.5)
         
     inventory_page.sc_button(CART_BUTTON)
     # verify if the number of products on badge equal to number of added items
     assert inventory_page.sc_number(SC_BADGE) == len(pdp_links)
     
     cart_page.checkout(CHECKOUT)
-    time.sleep(1)
+    time.sleep(0.5)
     chp_1 = CheckoutPage1(driver)
     chp_1.enter_first_name(first_name)
     chp_1.enter_last_name(last_name)
     chp_1.enter_postal_code(postal_code)
-    time.sleep(1)
+    time.sleep(0.5)
     chp_1.click_continue()
+    time.sleep(0.5)
+
+    chp2 = CheckoutPage2(driver)
+    chp2.click_finish()
     time.sleep(3)
+
+    chp3 = CheckoutPage3(driver)
+    chp3.pony_express_image()
+    assert chp3.pony_express.is_displayed()

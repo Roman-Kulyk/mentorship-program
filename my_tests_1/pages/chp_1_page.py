@@ -61,5 +61,5 @@ class CheckoutPage1(MainPage):
     def click_cancel(self) -> None:
         """This is a method to find and click CANCEL button on page."""
         self.cancel_button = self.driver.find_element(By.XPATH,
-                                        CONTINUE)
+                                        CHP_1_CANCEL)
         self.cancel_button.click()

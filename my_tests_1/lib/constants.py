@@ -60,7 +60,7 @@ CHP_1_ERROR_MESSAGE = "//h3[@data-test='error']"
 # Checkout page_2
 #===============================================================================
 CHP_2_CANCEL = "//a[@class = 'cart_cancel_link btn_secondary']"
-FINISH = "//a[@class = 'btn_action cart_button]"
+FINISH = "//a[@class = 'btn_action cart_button']"
 
 # Checkout page_3
 #===============================================================================
