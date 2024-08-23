@@ -1,11 +1,11 @@
 # Login page
-#===============================================================================
+# =============================================================================
 LOGIN_PAGE_URL = "https://www.saucedemo.com/v1/"
-ENTER_USERNAME_XPATH = "//input[@data-test='username']"
-ENTER_PASSWORD = "//input[@data-test='password']"
-CLICK_LOGIN = "//input[@value='LOGIN']"
-ERROR_MESSAGE = "//h3[@data-test='error']"
-#===============================================================================
+ENTER_USERNAME_XPATH = "//input[@data-test = 'username']"
+ENTER_PASSWORD = "//input[@data-test = 'password']"
+CLICK_LOGIN = "//input[@value =- 'LOGIN']"
+ERROR_MESSAGE = "//h3[@data-test = 'error']"
+# =============================================================================
 # Inventory page
 SC_BADGE = "//span[@class = 'fa-layers-counter shopping_cart_badge']"
 SLL_0 = "item_0_title_link"
@@ -27,7 +27,7 @@ SORT1 = "//select[@class = 'product_sort_container']/option[@value='az']"
 SORT2 = "//select[@class = 'product_sort_container']/option[@value='za']"
 SORT3 = "//select[@class = 'product_sort_container']/option[@value='lohi']"
 SORT4 = "//select[@class = 'product_sort_container']/option[@value='hilo']"
-#===============================================================================
+# =============================================================================
 # Procuct cards
 
 SL_1 = "(//div[@class = 'inventory_item'])[1]"
@@ -38,7 +38,7 @@ SL_5 = "(//div[@class = 'inventory_item'])[5]"
 SL_6 = "(//div[@class = 'inventory_item'])[6]"
 
 
-#===============================================================================
+# =============================================================================
 # Product page
 ADD_TO_CART_PDP = "//button[@class = 'btn_primary btn_inventory']"
 REMOVE_PDP = "//button[@class = 'btn_secondary btn_inventory']"
@@ -50,24 +50,24 @@ SORT_PRODUCT_CARDS = "//select[@class = 'product_sort_container']"
 CART_BUTTON = "//div[@id = 'shopping_cart_container']"
 
 # Cart page
-#===============================================================================
+# =============================================================================
 CONTINUE_SHOPPING = "//a[@class = 'btn_secondary']"
 CHECKOUT = "//a[@class = 'btn_action checkout_button']"
 
 # Checkout page_1
-#===============================================================================
-FIRST_NAME = "//input[@data-test='firstName']"
-LAST_NAME = "//input[@data-test='lastName']"
-ZIP = "//input[@data-test='postalCode']"
+# =============================================================================
+FIRST_NAME = "//input[@data-test = 'firstName']"
+LAST_NAME = "//input[@data-test = 'lastName']"
+ZIP = "//input[@data-test = 'postalCode']"
 CHP_1_CANCEL = "//a[@class = 'cart_cancel_link btn_secondary']"
 CONTINUE = "//input[@class = 'btn_primary cart_button']"
-CHP_1_ERROR_MESSAGE = "//h3[@data-test='error']"
+CHP_1_ERROR_MESSAGE = "//h3[@data-test = 'error']"
 
 # Checkout page_2
-#===============================================================================
+# =============================================================================
 CHP_2_CANCEL = "//a[@class = 'cart_cancel_link btn_secondary']"
 FINISH = "//a[@class = 'btn_action cart_button']"
 
 # Checkout page_3
-#===============================================================================
+# =============================================================================
 PONY_EXPRESS = "//img[@class = 'pony_express']"
