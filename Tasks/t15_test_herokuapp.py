@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import NoSuchElementException
 import time
 import pytest
 
@@ -107,10 +108,26 @@ class TestHerokuapp:
                                             'Infinite Scroll')
         assert infininte_scroll.is_displayed()
         infininte_scroll.click()
-        time.sleep(2)
+        time.sleep(0.5)
         # scroll down by pixel
         self.driver.execute_script("window.scrollBy(0, 2500);")
-        time.sleep(2)
+        time.sleep(0.5)
         self.driver.back()
-        time.sleep(2)
-        self.driver.quit()
+
+    def test_checkboxes(self):
+        checkboxes_button = self.driver.find_element(By.LINK_TEXT, "Checkboxes")
+        assert checkboxes_button.is_displayed()
+        checkboxes_button.click()
+        time.sleep(0.5)
+        cb1_button = self.driver.find_element(By.XPATH,
+                                             "(//input[@type = 'checkbox'])[1]")
+        cb1_button.click()
+        time.sleep(0.5)        
+        assert cb1_button.is_selected()
+        assert cb1_button.is_displayed()
+        assert cb1_button.is_enabled()
+        cb2_button = self.driver.find_element(By.XPATH,
+                                              "(//input[@type = 'checkbox'])[2]")
+        assert cb2_button.is_selected()
+        assert cb2_button.is_displayed()
+        assert cb2_button.is_enabled()
