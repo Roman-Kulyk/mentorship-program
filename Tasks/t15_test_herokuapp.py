@@ -1,9 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.common.exceptions import NoSuchElementException
 import time
 import pytest
+
 
 class TestHerokuapp:
     # Arrange
@@ -15,16 +15,16 @@ class TestHerokuapp:
         self.driver.implicitly_wait(3)
         yield
         self.driver.quit()
-    
+
     def test_drag_and_drop(self):
-        drag_and_drop = self.driver.find_element(By.LINK_TEXT,"Drag and Drop") 
+        drag_and_drop = self.driver.find_element(By.LINK_TEXT, "Drag and Drop")
         assert drag_and_drop.is_displayed()
         drag_and_drop.click()
         time.sleep(0.5)
         # get source element
-        source_element = self.driver.find_element(By.ID,"column-a")
+        source_element = self.driver.find_element(By.ID, "column-a")
         # get target element
-        target_element = self.driver.find_element(By.ID,"column-b")
+        target_element = self.driver.find_element(By.ID, "column-b")
         # initialize action chain object
         action = ActionChains(self.driver)
         # drag and drop the item
@@ -36,8 +36,8 @@ class TestHerokuapp:
 
     def test_hovers(self):
         action = ActionChains(self.driver)
-        
-        hovers = self.driver.find_element(By.LINK_TEXT,"Hovers")
+
+        hovers = self.driver.find_element(By.LINK_TEXT, "Hovers")
         assert hovers.is_displayed()
         hovers.click()
         time.sleep(0.5)
@@ -50,7 +50,8 @@ class TestHerokuapp:
         action.perform()
         time.sleep(0.5)
 
-        user_1_view_profile = self.driver.find_element(By.LINK_TEXT, "View profile")
+        user_1_view_profile = self.driver.find_element(By.LINK_TEXT,
+                                                    "View profile")
         assert user_1_view_profile.is_displayed()
         user_1_view_profile.click()
         time.sleep(0.5)
@@ -64,7 +65,8 @@ class TestHerokuapp:
         action.perform()
         time.sleep(0.5)
 
-        user_2_view_profile = self.driver.find_element(By.LINK_TEXT, "View profile")
+        user_2_view_profile = self.driver.find_element(By.LINK_TEXT,
+                                                    "View profile")
         assert user_2_view_profile.is_displayed()
         user_2_view_profile.click()
         time.sleep(0.5)
@@ -78,23 +80,25 @@ class TestHerokuapp:
         action.perform()
         time.sleep(0.5)
 
-        user_3_view_profile = self.driver.find_element(By.LINK_TEXT, "View profile")
+        user_3_view_profile = self.driver.find_element(By.LINK_TEXT,
+                                                    "View profile")
         assert user_3_view_profile.is_displayed()
         user_3_view_profile.click()
         time.sleep(0.5)
         self.driver.back()
 
     def test_horizontal_slider(self):
-        
+
         action = ActionChains(self.driver)
-                
-        horizontal_slider = self.driver.find_element(By.LINK_TEXT,"Horizontal Slider")
+
+        horizontal_slider = self.driver.find_element(By.LINK_TEXT,
+                                                    "Horizontal Slider")
         assert horizontal_slider.is_displayed()
         horizontal_slider.click()
         time.sleep(0.5)
 
-        horizontal_slider_element = self.driver.find_element(By.XPATH, 
-                                                        "//input[@type = 'range']")
+        horizontal_slider_element = self.driver.find_element(By.XPATH,
+                                                    "//input[@type = 'range']")
         assert horizontal_slider_element.is_displayed()
         action.click_and_hold(horizontal_slider_element).move_by_offset(55, 0).release()
         action.perform()
@@ -103,9 +107,9 @@ class TestHerokuapp:
         self.driver.back()
 
     def test_scroll(self):
-        
-        infininte_scroll = self.driver.find_element(By.LINK_TEXT, 
-                                            'Infinite Scroll')
+
+        infininte_scroll = self.driver.find_element(By.LINK_TEXT,
+                                                    'Infinite Scroll')
         assert infininte_scroll.is_displayed()
         infininte_scroll.click()
         time.sleep(0.5)
@@ -115,19 +119,48 @@ class TestHerokuapp:
         self.driver.back()
 
     def test_checkboxes(self):
-        checkboxes_button = self.driver.find_element(By.LINK_TEXT, "Checkboxes")
+        checkboxes_button = self.driver.find_element(By.LINK_TEXT,
+                                                     "Checkboxes")
         assert checkboxes_button.is_displayed()
         checkboxes_button.click()
         time.sleep(0.5)
         cb1_button = self.driver.find_element(By.XPATH,
-                                             "(//input[@type = 'checkbox'])[1]")
+                                            "(//input[@type = 'checkbox'])[1]")
         cb1_button.click()
-        time.sleep(0.5)        
+        time.sleep(0.5)
         assert cb1_button.is_selected()
         assert cb1_button.is_displayed()
         assert cb1_button.is_enabled()
         cb2_button = self.driver.find_element(By.XPATH,
-                                              "(//input[@type = 'checkbox'])[2]")
+                                            "(//input[@type = 'checkbox'])[2]")
         assert cb2_button.is_selected()
         assert cb2_button.is_displayed()
         assert cb2_button.is_enabled()
+
+    def test_dropdown_list(self):
+        dd_list_page = self.driver.find_element(By.LINK_TEXT, "Dropdown")
+        assert dd_list_page.is_displayed()
+        dd_list_page.click()
+        time.sleep(0.5)
+
+        dropdown_list = self.driver.find_element(By.ID, "dropdown")
+        assert dropdown_list.is_displayed()
+        dropdown_list.click()
+        time.sleep(0.5)
+
+        dropdown_list_opt1 = self.driver.find_element(By.XPATH,
+                                                    "(//option[@value = '1'])")
+        dropdown_list_opt2 = self.driver.find_element(By.XPATH,
+                                                    "(//option[@value = '2'])")
+
+        dropdown_list_opt1.click()
+        assert dropdown_list_opt1.is_enabled()
+        assert dropdown_list_opt1.is_selected()
+        time.sleep(3)
+
+        dropdown_list_opt2.click()
+        assert dropdown_list_opt2.is_enabled()
+        assert dropdown_list_opt2.is_selected()
+        time.sleep(3)
+
+        self.driver.back()
