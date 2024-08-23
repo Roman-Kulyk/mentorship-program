@@ -77,3 +77,8 @@ class InventoryPage(MainPage):
         """This is a method to define bm items"""
         self.bur_item = self.driver.find_element(By.ID, text)
         self.bur_item.click()
+
+    def sort_item(self, locator):
+        """This is a method to define sorting functionality"""
+        self.sort_menu_item = self.driver.find_element(By.XPATH, locator)
+        self.sort_menu_item.click()

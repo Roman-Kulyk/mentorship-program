@@ -21,6 +21,12 @@ MI_1 = "inventory_sidebar_link"
 MI_2 = "about_sidebar_link"
 MI_3 = "logout_sidebar_link"
 MI_4 = "reset_sidebar_link"
+
+SORT = "//select[@class = 'product_sort_container']"
+SORT1 = "//select[@class = 'product_sort_container']/option[@value='az']"
+SORT2 = "//select[@class = 'product_sort_container']/option[@value='za']"
+SORT3 = "//select[@class = 'product_sort_container']/option[@value='lohi']"
+SORT4 = "//select[@class = 'product_sort_container']/option[@value='hilo']"
 #===============================================================================
 # Procuct cards
 
