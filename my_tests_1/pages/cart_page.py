@@ -19,13 +19,13 @@ class CartPage(MainPage):
         """
         super().__init__(driver)
 
-    def continue_shopping(self):
+    def continue_shopping(self) -> None:
         """This is a method to define continue shopping button."""
         self.continue_shopping_button = self.driver.find_element(
             By.XPATH, CONTINUE_SHOPPING)
         self.continue_shopping_button.click()
 
-    def checkout(self):
+    def checkout(self) -> None:
         """This is a method to define checkout button."""
         self.checkout_button = self.driver.find_element(
             By.XPATH, CHECKOUT)
