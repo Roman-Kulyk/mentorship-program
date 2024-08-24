@@ -54,5 +54,5 @@ def test_login_functionality(chrome_browser:object, user_input:str,
 
         inventory_page.sc_button(CART_BUTTON)
         # return back to the inventory page
-        cart_page.continue_shopping(CONTINUE_SHOPPING)
+        cart_page.continue_shopping()
         time.sleep(1)

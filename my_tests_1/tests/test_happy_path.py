@@ -57,7 +57,7 @@ def test_happy_path(chrome_browser:object, user_input:str,
     # verify if the number of products on badge equal to number of added items
     assert inventory_page.sc_number(SC_BADGE) == len(pdp_links)
     
-    cart_page.checkout(CHECKOUT)
+    cart_page.checkout()
     time.sleep(0.5)
     chp_1 = CheckoutPage1(driver)
     chp_1.enter_first_name(first_name)
