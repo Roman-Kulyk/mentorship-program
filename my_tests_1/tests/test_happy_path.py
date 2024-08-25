@@ -9,12 +9,12 @@ from my_tests_1.pages.chp_3_page import *
 import time
 
 
-@pytest.mark.parametrize('user_input,password,first_name,last_name,postal_code',
-                        [('standard_user','secret_sauce','R2','D2','07800'),])
-
-def test_happy_path(chrome_browser:object, user_input:str,
-                             password:str, first_name:str,
-                             last_name:str, postal_code:str) -> None:
+@pytest.mark.parametrize(
+    'user_input, password, first_name, last_name, postal_code',
+    [('standard_user', 'secret_sauce', 'R2', 'D2', '07800'), ])
+def test_happy_path(
+        chrome_browser: object, user_input: str, password: str, first_name: str,
+        last_name: str, postal_code: str) -> None:
     """
     This is a method to verify adding product to cart from pdp.
     Parameters
@@ -23,8 +23,6 @@ def test_happy_path(chrome_browser:object, user_input:str,
                Username to log in with
     password:str
                Password to log in with
-    is_valid:bool
-               Variable to declare if log in s/b successfull or not
     """
     driver = chrome_browser
     login_page = LoginPage(driver)
@@ -36,13 +34,13 @@ def test_happy_path(chrome_browser:object, user_input:str,
     # Click Login
     login_page.click_login()
     time.sleep(0.5)
-        
+
     inventory_page = InventoryPage(driver)
-    
-    pdp_links =[SLL_0, SLL_1, SLL_2, SLL_3, SLL_4, SLL_5]
+
+    pdp_links = [SLL_0, SLL_1, SLL_2, SLL_3, SLL_4, SLL_5]
     cart_page = CartPage(driver)
     product_page = ProductPage(driver)
-    
+
     for pdp in pdp_links:
         # go to product page
         product_page.go_to_pdp_link(pdp)
@@ -52,11 +50,11 @@ def test_happy_path(chrome_browser:object, user_input:str,
         time.sleep(0.5)
         driver.back()
         time.sleep(0.5)
-        
-    inventory_page.sc_button(CART_BUTTON)
+
+    inventory_page.sc_button()
     # verify if the number of products on badge equal to number of added items
-    assert inventory_page.sc_number(SC_BADGE) == len(pdp_links)
-    
+    assert inventory_page.sc_number() == len(pdp_links)
+
     cart_page.checkout()
     time.sleep(0.5)
     chp_1 = CheckoutPage1(driver)

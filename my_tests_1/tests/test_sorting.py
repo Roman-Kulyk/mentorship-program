@@ -6,11 +6,10 @@ from my_tests_1.pages.cart_page import *
 import time
 
 
-@pytest.mark.parametrize('user_input,password',
-                             [('standard_user', 'secret_sauce'),])
-
-def test_sorting(chrome_browser:object, user_input:str,
-                             password:str) -> None:
+@pytest.mark.parametrize(
+    'user_input,password', [('standard_user', 'secret_sauce'), ])
+def test_sorting(
+        chrome_browser: object, user_input: str, password: str) -> None:
     """
     This is a method to verify sorting functionality.
     Parameters
@@ -32,9 +31,9 @@ def test_sorting(chrome_browser:object, user_input:str,
     # Click Login
     login_page.click_login()
     time.sleep(1)
-        
+
     inventory_page = InventoryPage(driver)
-    
+
     # list of available options in dropdown
     sort_options = [SORT1, SORT2, SORT3, SORT4]
     for options in sort_options:

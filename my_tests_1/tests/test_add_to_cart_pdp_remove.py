@@ -6,11 +6,10 @@ from my_tests_1.pages.cart_page import *
 import time
 
 
-@pytest.mark.parametrize('user_input,password',
-                             [('standard_user', 'secret_sauce'),])
-
-def test_add_to_cart_pdp(chrome_browser:object, user_input:str,
-                             password:str) -> None:
+@pytest.mark.parametrize(
+    'user_input,password', [('standard_user', 'secret_sauce'), ])
+def test_add_to_cart_pdp(
+        chrome_browser: object, user_input: str, password: str) -> None:
     """
     This is a method to verify adding product to cart from pdp.
     Parameters
@@ -19,8 +18,6 @@ def test_add_to_cart_pdp(chrome_browser:object, user_input:str,
                Username to log in with
     password:str
                Password to log in with
-    is_valid:bool
-               Variable to declare if log in s/b successfull or not
     """
     driver = chrome_browser
     login_page = LoginPage(driver)
@@ -34,10 +31,10 @@ def test_add_to_cart_pdp(chrome_browser:object, user_input:str,
     # Click Login
     login_page.click_login()
     time.sleep(1)
-        
-    pdp_links =[SLL_0, SLL_1, SLL_2, SLL_3, SLL_4, SLL_5]
+
+    pdp_links = [SLL_0, SLL_1, SLL_2, SLL_3, SLL_4, SLL_5]
     product_page = ProductPage(driver)
-    
+
     for pdp in pdp_links:
         # go to product page
         product_page.go_to_pdp_link(pdp)

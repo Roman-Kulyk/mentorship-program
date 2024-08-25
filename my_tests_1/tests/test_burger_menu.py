@@ -3,11 +3,11 @@ from my_tests_1.pages.login_page import *
 from my_tests_1.pages.inventory_page import *
 import time
 
-@pytest.mark.parametrize('user_input,password',
-                             [('standard_user', 'secret_sauce'),])
 
-def test_burger(chrome_browser:object, user_input:str,
-                             password:str) -> None:
+@pytest.mark.parametrize(
+    'user_input,password', [('standard_user', 'secret_sauce'), ])
+def test_burger(
+        chrome_browser: object, user_input: str, password: str) -> None:
     """
     This is a method to verify burger menu functionality.
     Parameters
@@ -29,7 +29,7 @@ def test_burger(chrome_browser:object, user_input:str,
     # Click Login
     login_page.click_login()
     time.sleep(3)
-       
+
     inventory_page = InventoryPage(driver)
     inventory_page.bm_button()
     time.sleep(2)
@@ -45,12 +45,12 @@ def test_burger(chrome_browser:object, user_input:str,
 
     inventory_page.bm_item(MI_1)
     time.sleep(2)
-   
+
     inventory_page.bm_button()
     time.sleep(2)
 
     inventory_page.bm_item(MI_4)
     time.sleep(2)
-   
+
     inventory_page.bm_cross_button()
     time.sleep(2)
