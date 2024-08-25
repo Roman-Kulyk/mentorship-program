@@ -6,11 +6,10 @@ from my_tests_1.pages.cart_page import *
 import time
 
 
-@pytest.mark.parametrize('user_input,password',
-                             [('standard_user', 'secret_sauce'),])
-
-def test_login_functionality(chrome_browser:object, user_input:str,
-                             password:str) -> None:
+@pytest.mark.parametrize(
+        'user_input,password', [('standard_user', 'secret_sauce'), ])
+def test_add_to_cart_inventory_remove(
+        chrome_browser: object, user_input: str, password: str) -> None:
     """
     This is a method to verify login functionality.
     Parameters
@@ -47,7 +46,7 @@ def test_login_functionality(chrome_browser:object, user_input:str,
         # add product to cart
         inventory_page.add_to_cart_pdp(ADD_TO_CART_PDP)
         time.sleep(1)
-        
+
         # remove product from cart
         inventory_page.remove_pdp(REMOVE_PDP)
         time.sleep(1)
