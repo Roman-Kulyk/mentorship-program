@@ -5,11 +5,11 @@ class MainPage:
     """
     Constructs all the necessary attributes for the MainPage object.
     Attributes:
-    webdriver:obj
+    webdriver:object
                 It is an object of webdriver class.
     Methods:
     __init__
-        This is a method to initialize instance of the LoginPage class.
+        This is a method to initialize instance of the MainPage class.
     open_page
         This is a method to open a certain web page.
     """
@@ -21,7 +21,6 @@ class MainPage:
                 webdriver to initialize
         """
         self.driver = webdriver
-        
 
     def open_page(self, url):
         """This is a method to open a certain web page."""
