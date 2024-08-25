@@ -11,15 +11,14 @@ import time
 def test_add_to_cart_inventory_remove(
         chrome_browser: object, user_input: str, password: str) -> None:
     """
-    This is a method to verify login functionality.
+    This is a method to verify add to cart from inventory page and
+    remove functionality.
     Parameters
     chrome_browser:self
     user_input:str
                Username to log in with
     password:str
                Password to log in with
-    is_valid:bool
-               Variable to declare if log in s/b successfull or not
     """
     driver = chrome_browser
     login_page = LoginPage(driver)
