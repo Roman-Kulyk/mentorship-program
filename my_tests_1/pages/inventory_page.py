@@ -48,12 +48,12 @@ class InventoryPage(MainPage):
         self.inventory_item_name = self.driver.find_element(By.XPATH, locator)
         self.inventory_item_name.click()
 
-    def add_to_cart_pdp(self, locator str) -> None:
+    def add_to_cart_pdp(self, locator: str) -> None:
         """This method defines adding product to cart from pdp."""
         add_to_cart_button = self.driver.find_element(By.XPATH, locator)
         add_to_cart_button.click()
 
-    def remove_pdp(self, locator str) -> None:
+    def remove_pdp(self, locator: str) -> None:
         """This method defines removing item from cart through pdp."""
         remove_button = self.driver.find_element(By.XPATH, locator)
         remove_button.click()
