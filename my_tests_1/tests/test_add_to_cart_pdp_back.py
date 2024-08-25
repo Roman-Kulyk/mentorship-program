@@ -40,5 +40,5 @@ def test_add_to_cart_pdp_back(
         product_page.go_to_pdp_link(pdp)
         time.sleep(1)
         # return back to the inventory page
-        product_page.back_pdp(BACK_BUTTON_PDP)
+        product_page.back_pdp()
         time.sleep(1)

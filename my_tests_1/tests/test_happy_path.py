@@ -46,7 +46,7 @@ def test_happy_path(
         product_page.go_to_pdp_link(pdp)
         time.sleep(0.5)
         # add product to cart from pdp
-        product_page.add_to_cart_pdp(ADD_TO_CART_PDP)
+        product_page.add_to_cart_pdp()
         time.sleep(0.5)
         driver.back()
         time.sleep(0.5)

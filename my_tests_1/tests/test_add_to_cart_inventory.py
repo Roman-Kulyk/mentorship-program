@@ -45,7 +45,7 @@ def test_add_to_cart(
         inventory_page.go_to_pdp_link(pdp)
         time.sleep(1)
         # add product to cart
-        inventory_page.add_to_cart_pdp(ADD_TO_CART_PDP)
+        inventory_page.add_to_cart_pdp()
         time.sleep(1)
 
         inventory_page.sc_button()

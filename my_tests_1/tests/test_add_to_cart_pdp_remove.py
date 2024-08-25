@@ -40,11 +40,11 @@ def test_add_to_cart_pdp(
         product_page.go_to_pdp_link(pdp)
         time.sleep(1)
         # add product to cart from pdp
-        product_page.add_to_cart_pdp(ADD_TO_CART_PDP)
+        product_page.add_to_cart_pdp()
         time.sleep(1)
 
         # remove product from cart
-        product_page.remove_pdp(REMOVE_PDP)
+        product_page.remove_pdp()
         time.sleep(1)
         # return back to the inventory page
         driver.back()

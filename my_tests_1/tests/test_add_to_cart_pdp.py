@@ -43,7 +43,7 @@ def test_add_to_cart_pdp(
         product_page.go_to_pdp_link(pdp)
         time.sleep(1)
         # add product to cart from pdp
-        product_page.add_to_cart_pdp(ADD_TO_CART_PDP)
+        product_page.add_to_cart_pdp()
         time.sleep(1)
 
         inventory_page.sc_button()
@@ -58,3 +58,4 @@ def test_add_to_cart_pdp(
     cart_page.checkout()
     time.sleep(3)
     driver.back()
+
