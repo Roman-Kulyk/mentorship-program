@@ -33,8 +33,8 @@ class LoginPage(MainPage):
                    Username to log in with
         """
 
-        self.user_name_input = self.driver.find_element(By.XPATH,
-                                            ENTER_USERNAME_XPATH)
+        self.user_name_input = self.driver.find_element(
+            By.XPATH, ENTER_USERNAME_XPATH)
         self.user_name_input.clear()
         self.user_name_input.send_keys(user_input)
 
@@ -45,18 +45,18 @@ class LoginPage(MainPage):
         password:str
                  Password to log in with
         """
-        password_input = self.driver.find_element(By.XPATH,
-                                            ENTER_PASSWORD)
+        password_input = self.driver.find_element(
+            By.XPATH, ENTER_PASSWORD)
         password_input.clear()
         password_input.send_keys(password)
 
     def click_login(self) -> None:
         """This is a method to find and click Login button on page."""
-        self.login_button = self.driver.find_element(By.XPATH,
-                                        CLICK_LOGIN)
+        self.login_button = self.driver.find_element(
+            By.XPATH, CLICK_LOGIN)
         self.login_button.click()
 
     def error_message(self) -> None:
         """This is a method to find error message on page."""
-        error_message = self.driver.find_element(By.XPATH,
-                                    ERROR_MESSAGE)
+        error_message = self.driver.find_element(
+            By.XPATH, ERROR_MESSAGE)
