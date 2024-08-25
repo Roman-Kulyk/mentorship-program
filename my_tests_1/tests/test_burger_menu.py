@@ -31,7 +31,7 @@ def test_burger(chrome_browser:object, user_input:str,
     time.sleep(3)
        
     inventory_page = InventoryPage(driver)
-    inventory_page.bm_button(BM_BUTTON)
+    inventory_page.bm_button()
     time.sleep(2)
 
     # click every item in burger menu
@@ -46,11 +46,11 @@ def test_burger(chrome_browser:object, user_input:str,
     inventory_page.bm_item(MI_1)
     time.sleep(2)
    
-    inventory_page.bm_button(BM_BUTTON)
+    inventory_page.bm_button()
     time.sleep(2)
 
     inventory_page.bm_item(MI_4)
     time.sleep(2)
    
-    inventory_page.bm_cross_button(BM_CROSS_BUTTON)
+    inventory_page.bm_cross_button()
     time.sleep(2)

@@ -52,7 +52,7 @@ def test_login_functionality(chrome_browser:object, user_input:str,
         inventory_page.remove_pdp(REMOVE_PDP)
         time.sleep(1)
 
-        inventory_page.sc_button(CART_BUTTON)
+        inventory_page.sc_button()
         # return back to the inventory page
         cart_page.continue_shopping()
         time.sleep(1)

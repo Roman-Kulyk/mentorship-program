@@ -49,14 +49,14 @@ def test_login_functionality(chrome_browser:object, user_input:str,
         inventory_page.add_to_cart_pdp(ADD_TO_CART_PDP)
         time.sleep(1)
     
-        inventory_page.sc_button(CART_BUTTON)
+        inventory_page.sc_button()
         # return back to the inventory page
         cart_page.continue_shopping()
         time.sleep(1)
 
-    inventory_page.sc_button(CART_BUTTON)
+    inventory_page.sc_button()
     # verify if the number of products on badge equal to number of added items
-    assert inventory_page.sc_number(SC_BADGE) == len(pdp_links)
+    assert inventory_page.sc_number() == len(pdp_links)
        
     cart_page.checkout()
     time.sleep(3)
