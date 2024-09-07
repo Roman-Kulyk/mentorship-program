@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import pytest
-
+from selenium.webdriver.support.ui import Select 
 
 class TestHerokuapp:
     # Arrange
@@ -137,30 +137,60 @@ class TestHerokuapp:
         assert cb2_button.is_displayed()
         assert cb2_button.is_enabled()
 
-    def test_dropdown_list(self):
+    # def test_dropdown_list(self): # Option #1 using XPATH
+    #     dd_list_page = self.driver.find_element(By.LINK_TEXT, "Dropdown")
+    #     assert dd_list_page.is_displayed()
+    #     dd_list_page.click()
+    #     time.sleep(0.5)
+
+    #     dropdown_list = self.driver.find_element(By.ID, "dropdown")
+    #     assert dropdown_list.is_displayed()
+    #     dropdown_list.click()
+    #     time.sleep(0.5)
+
+    #     dropdown_list_opt1 = self.driver.find_element(By.XPATH,
+    #                                                 "(//option[@value = '1'])")
+    #     dropdown_list_opt2 = self.driver.find_element(By.XPATH,
+    #                                                 "(//option[@value = '2'])")
+           
+    #     dropdown_list_opt1.click()
+    #     assert dropdown_list_opt1.is_enabled()
+    #     assert dropdown_list_opt1.is_selected()
+    #     time.sleep(3)
+
+    #     dropdown_list_opt2.click()
+    #     assert dropdown_list_opt2.is_enabled()
+    #     assert dropdown_list_opt2.is_selected()
+    #     time.sleep(3)
+
+    def test_dropdown_list(self): # Option #2 using Select module
         dd_list_page = self.driver.find_element(By.LINK_TEXT, "Dropdown")
         assert dd_list_page.is_displayed()
         dd_list_page.click()
         time.sleep(0.5)
-
+      
         dropdown_list = self.driver.find_element(By.ID, "dropdown")
         assert dropdown_list.is_displayed()
         dropdown_list.click()
-        time.sleep(0.5)
-
-        dropdown_list_opt1 = self.driver.find_element(By.XPATH,
-                                                    "(//option[@value = '1'])")
-        dropdown_list_opt2 = self.driver.find_element(By.XPATH,
-                                                    "(//option[@value = '2'])")
-
-        dropdown_list_opt1.click()
-        assert dropdown_list_opt1.is_enabled()
-        assert dropdown_list_opt1.is_selected()
-        time.sleep(3)
-
-        dropdown_list_opt2.click()
-        assert dropdown_list_opt2.is_enabled()
-        assert dropdown_list_opt2.is_selected()
-        time.sleep(3)
-
+        # Create an object of the select class
+        drop = Select(dropdown_list)
+        
+        # Select by index 
+        drop.select_by_index(1) 
+        time.sleep(2)
+        drop.select_by_index(2)
+        time.sleep(2)
+        
+        # Select by value 
+        drop.select_by_value("1") 
+        time.sleep(2) 
+        drop.select_by_value("2")
+        time.sleep(2)
+        
+        # Select by visible text
+        drop.select_by_visible_text("Option 1") 
+        time.sleep(2)
+        drop.select_by_visible_text("Option 2")
+        time.sleep(2)
         self.driver.back()
+
