@@ -1,0 +1,34 @@
+https://www.geeksforgeeks.org/waits-in-selenium-python/
+
+Implicit Waits
+An implicit wait tells WebDriver to poll the DOM for a certain amount of time
+when trying to find any element (or elements) not immediately available. the
+default setting is 0. Once set, the implicit wait is set for the life of the
+WebDriver object.
+
+Explicit Waits
+An explicit wait is a code you define to wait for a certain condition to occur
+before proceeding further in the code. The extreme case of this is time.sleep(),
+which sets the condition to an exact time period to wait. There are some
+convenience methods provided that help you write code that will wait only as
+long  as required. Explicit waits are achieved by using WebDriverWait class in
+combination with expected_conditions.
+
+Some of the Expected Conditions:
+- title_is
+- title_contains
+- presence_of_element_located
+- visibility_of_element_located
+- visibility_of
+- presence_of_all_elements_located
+- element_located_to_be_selected
+- element_selection_state_to_be
+- element_located_selection_state_to_be
+- alert_is_present
+
+Fluent Waits
+Fluent Wait is one of the mechanisms available at Selenium WebDriver that
+permits to set the maximal time for a condition to be accomplished and the
+frequency of their attempts to check the condition. Fluent Wait offers more
+flexibility since programmers can change the wait conditions according to the
+complications and situations during the runtime.

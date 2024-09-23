@@ -1,0 +1,88 @@
+Using Math-Related Built-in Functions
+abs()    Calculates the absolute value of a number
+divmod() Computes the quotient and remainder of integer division
+max()    Finds the largest of the given arguments or items in an iterable
+min()    Finds the smallest of the given arguments or items in an iterable
+pow()    Raises a number to a power
+round()  Rounds a floating-poing value
+sum()    Sums the values in an iterable
+
+Creating and Manipulating Basic Data Types
+int()       Constructs an integer object from a number of strings
+bin()       Converts an integer to abinary strings
+oct()       Converts an integer to an octal string
+hex()       Converts an integer to an hexadecimal string
+float()     Constructs a floating-point object from a number or string
+complex()   Constructs a complex number from arguments
+str()       Creates a string object
+repr()      Creates a developer-friendly string representation of an object
+bool()      Converts an argument to a Boolean value
+ord()       Looks up the integer code point of a character
+chr()       Looks up the character for the given integer code point
+bytes()     Creates a bytes object (similar to bytearray, but immutable)
+bytearray() Creates an object of the bytearray class
+
+Creating Collecttion Data Types
+list()      Creates a list object from an iterable
+tuple()     Creates a tuple object from an iterable
+dict()      Creates a dict object from a series of key-value pairs or keyword arguments
+set()       Creates a set object from an iterable
+frozenset() Creates a frozenset object from an iterable
+
+Processing Iterables and Iterators
+len()       Calculates the length of a sized object
+reversed()  Constructs a reverse iterator
+sorted()    Creates a sorted list from an iterable
+all()       Checks if all elements of an iterable are true
+any()       Checks if any elements of an iterable aret true
+range()     Generates a range of integer values
+enumerate() Creates an iterator of tuples containing indices
+            and values from and iterable
+slice()     Creates a slice object
+zip()       Creates an iterator that aggregates elements from Iterables
+iter()      Constructs an iterator object
+next()      Retrieves the next item from an iterable
+filter()    Filters elements from an iterable
+map()       Applies a Function to every item of an iterable
+
+Processing Input and Output
+input()  Reads input from the console
+open()   Opens a file and provides access to a file object
+print()  Prints to  text stream or the console
+format() Converts a value to a formatted representation
+
+Working With Classes, Objects, and Attributes
+property()     Returns a property value of a class
+classmethod()  Returns a class method
+staticmethod() Returns a static method
+getattr()      Returns teh value of a named attribute of an object
+setattr()      Sets the value of a named attribute of an object
+delattr()      Deletes an attribute from an object
+hasattr()      Returns True if an object has a given attribute
+type()         Return the type of an object or allows for creating new classed dynamically
+isinstance()   Determines whether an object is an instance of a given class
+issubclass()   Determines whether a class is a subclas of a given class
+callable()     Returns True if an object appears to callable
+super()        Returns a proxy object that delegates method calls to a parent or
+               sibling class
+object()       Creates a new featureless object
+
+Working With Python Scopes
+locals()  Updates and returns a dictionary representing the current local symbol table
+globals() Returns a dictionary representing the current global symblo table
+
+Introspecting Objects
+id()  Returns the identity of an object
+dir() Returns a list of names in the current local scope or a list of object Attributes
+var() Returns the __dict__ attribute for a module, class, or object
+
+Running Python Code From strings
+eval()    Evaluated abitrary Pyhton expressions from a string compiled code input
+exec()    Executes arbitrary Python code from a string or compiled code input
+compile() Generates a compiled code object from a string
+
+Using Miscellaneous Functions
+help()       Invokes the built-in help system
+hash()       Calculates the hash value of and objece
+__import__() Invoked by the import statement
+memoryview() Returns a memory view object
