@@ -1,0 +1,27 @@
+Memory leak is a type of resource leak that occurs when a computer program
+incorrectly manages memory allocations in a way that memory which is no longer
+needed is not released. A memory leak may also happen when an object is stored
+in memory but cannot be accessed by the running code. A memory leak has symptoms
+similar to a number of other problems and generally can only be diagnosed by a
+programmer with access to the program's code.
+
+Consequences:
+A memory leak reduces the performance of the computer by reducing the amount of
+available memory. A memory leak can cause an incease in memory usage, performance
+run-time and can negatively impact the user experience.
+
+Much more serious leaks include those:
+-where a program runs for a long time and consumes added memory over time, such
+as background tasks on servers, and especially in embedded systems which may be
+left running for many years.
+-where new memory is allocated frequently for one-time tasks, such as when
+rendering the frames of a computer game or animated video.
+-where a program can request memory, such as shared memory, that is not released,
+even when program terminates.
+- where memory is very limited, such as in an embedded system or portable device,
+or where the program requires a very large amount of memory to begin with, leaving
+little margin for leaks.
+-where a leak ocurs within the operating system or memory manager
+-when a system device driver causes a leak
+-running on an operating system that does not automatically release memory on
+program termination.
