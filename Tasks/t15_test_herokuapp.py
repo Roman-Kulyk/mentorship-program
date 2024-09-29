@@ -174,23 +174,37 @@ class TestHerokuapp:
         dropdown_list.click()
         # Create an object of the select class
         drop = Select(dropdown_list)
-        
-        # Select by index 
+
+        # Select by index first option
         drop.select_by_index(1) 
         time.sleep(2)
+        selected_option = drop.first_selected_option.text
+        assert selected_option == 'Option 1', 'Selected option should be Option 1'
+        # Select by index second option
         drop.select_by_index(2)
         time.sleep(2)
+        selected_option = drop.first_selected_option.text
+        assert selected_option == 'Option 2', 'Selected option should be Option 2'
         
-        # Select by value 
+        # Select by value first option 
         drop.select_by_value("1") 
         time.sleep(2) 
+        selected_option = drop.first_selected_option.text
+        assert selected_option == 'Option 1', 'Selected option should be Option 1'
+        # Select by value second option
         drop.select_by_value("2")
         time.sleep(2)
+        selected_option = drop.first_selected_option.text
+        assert selected_option == 'Option 2', 'Selected option should be Option 2'
         
-        # Select by visible text
+        # Select by visible text first option
         drop.select_by_visible_text("Option 1") 
         time.sleep(2)
+        selected_option = drop.first_selected_option.text
+        assert selected_option == 'Option 1', 'Selected option should be Option 1'
+        # Select by visible text second option
         drop.select_by_visible_text("Option 2")
+        selected_option = drop.first_selected_option.text
+        assert selected_option == 'Option 2', 'Selected option should be Option 2'
         time.sleep(2)
         self.driver.back()
-
