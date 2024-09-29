@@ -1,0 +1,39 @@
+Advantages of Selenium ExpectedConditions:
+- with explicit waits, more expected success conditions can be implemented.
+- it allows the coder to wait for the presence or absence of elements/conditions.
+- the timeout can be customized on every call.
+
+
+element_to_be_clickable(mark: WebElement | Tuple[str, str])
+An expectation for checking an element is visible and enabled such that you can
+click it.
+element is either a locator(text) or an WebElement
+
+element_to_be_selected(element: WebElement)
+An expectation for checking the selection is selected.
+element is WebElement object
+
+presence_of_element_located(locator: Tuple[str, str])
+An expectation for checking that an element is present on the DOM of a page.
+This does not necessarily mean that the element is visible.
+locator - used to find the element retuns the WebElement once it is located
+ 
+title_contains(title: str)
+An expectation for checking that the title contains a case-sensitive substring.
+title is the fragment of title expected retuns True when the title matches,
+False otherwise
+
+title_is(title: str)
+An expectation for checking the title of a page.
+title is the expected title, which must be an exact match returns True if the
+title matches, False otherwise
+
+url_to_be(url: str)
+An expectation for checking the current url.
+url is the expected url, which must be an exact match returns True if the url
+matches, False otherwise
+
+visibility_of_element_located(locator: Tuple[str, str])
+An expectation for checking that an element is present on the DOM of a page and
+visible. Visibility means that the element is not only dysplayed but also has a 
+height and width that is greater than 0.

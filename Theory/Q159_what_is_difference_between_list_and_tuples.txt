@@ -1,0 +1,36 @@
+In Python, lists and tuples are versatile and useful data types that allow you
+to store data in a sequence. 
+
+List is a collection of arbitrary objects.
+To define a list, you typically enclose a comma-separated sequence of objects in
+square brackets [].
+
+Tuples are also collections of arbitrary objects.
+To define a tuple, you'll enclose a comma-separated sequence of objects in
+parentheses().
+
+Feature                          List  Tuple
+Is an ordered sequence           yes   yes
+Can contain arbitrary objects    yes   yes
+Can be indexed and sliced        yes   yes
+Can be nested                    yes   yes
+Is mutable                       yes   no
+
+digits = list(range(10))
+digits = tuple(range(10))
+
+Use a list instead of tuple:
+-mutable collections: When you need to add, remove, or change elements in the 
+collection
+-dynamic size: When the collection's size might change during the code's execution
+-homogeneous data: When you need to store data of a homogeneous type or when the
+data represents a homogeneous concept.
+
+Use a tuple rather than a list:
+-immutable collections: when you have a fixed collection on items that shouldn't
+change.
+-fixed size: when the collection's size won't change during the code's execution.
+-heterogeneous data: when you need to store data of a heterogeneous type or when
+the data represents a heterogeneous concept.
+-function's return values: when a function returns multiple values, you'll
+typically use a tuple to pack these values together.
