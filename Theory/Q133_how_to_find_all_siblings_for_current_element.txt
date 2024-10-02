@@ -1,0 +1,7 @@
+To select all sibling for element, you can use the folloving XPath
+syntax:
+
+xpath_expression/following-sibling::tagName
+
+The following-sibling axes selects all sibling next to current context node.
+Siblings are at the same level of the current context under the same parents.
