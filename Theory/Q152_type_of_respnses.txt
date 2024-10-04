@@ -1,0 +1,27 @@
+Response
+The Response interface of the FetchAPI represents the response to a request.
+
+You can create a new Response object using the Response() constructor, but You
+are more likely to encounter a Response object being returned as the results of
+another API operation.
+
+Type of responses:
+- constructor:Response()
+- instance properties:body
+                      bodyUsed
+                      headers
+                      ok
+                      redirected
+                      status
+                      statusText
+                      Typeurl
+- static methods:error()
+                 json()
+                 redirect()
+- instance methods:arrayBuffer()
+                   blob()
+                   bytes()
+                   clone()
+                   formData()
+                   json()
+                   text()
