@@ -1,0 +1,51 @@
+Data serialization is the process of converting structured data to a format that
+allows sharing or storage of the data in a form that allows recovery of its
+original structure. in some cases, the secondary intention is to minimize the
+data's size which then reduces disk space or bandwith requirements.
+
+Flat vs. Nested data
+Before beginning to serialize data it is important to identify or decide how the
+data should be structured during serialization - flat or nested. The difference
+in the two styles are shown in the below examples.
+
+FLAT style:
+{"Type: "A", "field": "value1", "field2: "value2", "field3": "value3"}
+
+NESTED style:
+{"A"
+    {"field": "value1", "field2: "value2", "field3": "value3"}}
+
+Serializing Text
+Simple file(flat data)
+If the data to be serialized is located in a file and contains flat data, Python
+offers two methods to serialize data.
+
+repr
+The repr method in Pyhton takes a single object parameter and returns a printable
+representation of the input.
+
+ast.literal_eval
+The literal_eval method safely parses and evaluates an expression for a Python
+datatype. Supported data types are: strings, numbers, tuples, lists, dicts, and
+None.
+
+CSV file(flat data)
+The CSV module in Python implements classes to read and write tabular data in CSV
+format.
+
+YAML (nested data)
+There are many third party modules to parse and read/write YAML file structures
+in Python.
+
+JSON file (nested data)
+Python's JSON module can be used to read and write JSON files.
+
+XML (nested data)
+XML parsing in Pyhton is possible using the xml package.
+
+NumPy Array (flat data)
+Python's NumPy array can be used to serialize and deserialize data to and form
+byte representation.
+
+Pickle (nested data)
+The native data serialization module for Python is called Pickle.
