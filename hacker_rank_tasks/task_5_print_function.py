@@ -1,13 +1,13 @@
+"""
 The included code stub will read an integer, n, from STDIN.
-
 Without using any string methods, try to print the following:
 123...n
-
 Note that "..." represents the consecutive values in between.
+
 
 Example
 5
-Print the string .
+Print the string.
 12345
 Input Format
 
@@ -26,3 +26,10 @@ Sample Input 0
 Sample Output 0
 
 123
+"""
+if __name__ == '__main__':
+    n = int(input())
+    if 1 <= n <=150:
+        for i in range(1,n + 1):
+            print(i, end='')
+        print()
