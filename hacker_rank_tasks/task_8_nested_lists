@@ -1,4 +1,21 @@
 if __name__ == '__main__':
-    for _ in range(int(input())):
-        name = input()
-        score = float(input())
+
+    python_students = []
+    
+    n = (int(input()))
+    if 2 <= n <= 5:
+        for _ in range(n):
+            name = input()
+            scope = float(input())
+            python_students.append([name,scope])
+        
+        second = max(python_students, key=lambda x: x[1])[1]
+        first = min(python_students, key=lambda x: x[1])[1]
+
+        for i in range(len(python_students)):
+            if python_students[i][1] <= second and python_students[i][1] != first:
+                second = python_students[i][1]
+
+        for i in range(len(python_students)):
+            if second == python_students[i][1]:
+                print(python_students[i][0])
