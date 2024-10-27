@@ -8,7 +8,7 @@ markd key:value pairs are
 query_name = 'beta'
 The query_name is 'beta'. beta's average score is ?(30+50+70)/3=50.0.
 Input Format
-The first line contains the integer , the number of students' records. The next  lines contain the names and marks obtained by a student, each value separated by a space. The final line contains query_name, the name of a student to query.
+The first line contains the integer n, the number of students' records. The next  lines contain the names and marks obtained by a student, each value separated by a space. The final line contains query_name, the name of a student to query.
 Constraints
 2 <= n <= 10
 0<= marks[i] <= 100
@@ -24,4 +24,8 @@ if __name__ == '__main__':
         scores = list(map(float, line))
         student_marks[name] = scores
     query_name = input()
+    all_marks = (sum(student_marks[query_name])) 
+    average = all_marks/len(student_marks[query_name])
+    print(f'{average:.2f}')
+    
   
