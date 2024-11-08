@@ -1,0 +1,37 @@
+The Python with statement creates a runtime context that allows you to run a
+group of statements under the control of a context manager.
+The with statement can make your code clearer, safer, and reusable.
+To write a with statement, you need to use the following general syntax:
+
+with expression as target_var:
+    do_something(target_var)
+
+The context manager object results from evaluating the expression after with. In
+other words, expression must return an object that implements the context
+management protocol. This protocol consist of two special methodsP
+1. .__enter__() is called by the with statement to enter ther runtime context.
+2. .__exit__() is called when the execution leaves the with code block.
+
+Here's how the with statement proceeds when Python runs into it:
+1. Call expression to obtain a context manager.
+2. Store the context manager's .__enter__() and .__exit__() methods for later use.
+3. Call .__enter__() on the context manager and bind its return value to
+target_var if provided.
+4. Execute the with code block.
+5. Call .__exit__() on the context manager when the with code block finishes.
+
+with open("hello.txt", mode="w") as file:
+     file.write("Hello, World!")
+
+
+You can supply any numbers of context managers separated by commas:
+
+with open("input.txt") as in_file, open("output.txt", "w") as out_file:
+    # Read content from input.txt
+    # Transform the content
+    # Write the transformed content to output.txtpa
+    pass
+
+Opening files using the with statement is generally recommended because it ensures
+that open file descriptors are automatically closed after the flow of execution
+leaves the with code block.
