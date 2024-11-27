@@ -44,8 +44,10 @@ r = int(input_string[1])
 
 def count_substring(arr, r):
     # return list(sorted(permutations(arr, r)))
+    print(list(sorted(permutations(arr,r))))
     for i in list(sorted(permutations(arr, r))):
-        print(i[0] + i[1])
+        # print((i[0] + i[1]), i[0], i[1])
+        print((i[0] + i[1]), i[0], i[1])
 
 count_substring(arr, r)
 
