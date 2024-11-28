@@ -18,8 +18,6 @@ Output Format
 Print the permutations of the string  on separate lines.
 Sample Input
 HACK 2
-ABCD 3
-ABCDEF 4
 Sample Output
 AC
 AH
@@ -42,6 +40,7 @@ are printed in lexicographic sorted order.
 from itertools import permutations
 input_string = input().split()
 arr = input_string[0]
+
 r = int(input_string[1])
 
 def count_substring(arr, r):
