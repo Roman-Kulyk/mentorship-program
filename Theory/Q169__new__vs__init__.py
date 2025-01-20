@@ -4,6 +4,7 @@ returning a new instance of the class. It takes the class as its first argument
 followed by additional arguments.
 You should use __new__ when you need to control the creation of the object. For
 example, you might want to use __new__ to:
+
 -Ensure that the object is of certain type.
 -Set the object initial state.
 -Prevent the object from being created.
@@ -13,6 +14,7 @@ created object. It takes the object as int first argument followed by
 additional arguments.
 You should use __init__ when you need to initialize the object. For example,
 you might want to use __init__ to:
+
 -Set the object's attributes.
 -Call the objects superclass' __init__ methos.
 -Perform other initialization tasks.
