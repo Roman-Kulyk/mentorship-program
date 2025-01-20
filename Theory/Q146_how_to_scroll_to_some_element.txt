@@ -1,0 +1,74 @@
+1.Scroll to element
+This is the most commont scenario. Unlike traditional click and send keys
+methods, the action class does not automatically scroll the target element into
+view, so this method will need to be used if elements are not already inside the 
+viewport.
+This method takes a web element as the sole argument.
+Regardless of whether the element is above or below the current viewscreen, the
+viewport will be scrolled so the bottom of the element is at the bottom of the
+screen.
+
+iframe = driver.find_element(By.TAG_NAME, "footer")
+ActionChains(driver)\
+    .scroll_to_element(iframe)\
+    .perform()
+
+2.Scroll by a given amount
+This is the second most common scenario for scrolling. Pass in an delta x and a
+delta y value for how much to scroll in the right and down directions. Negative
+values represent left and up, respectively.
+
+footer = driver.find_element(By.TAG_NAME, "footer")
+delta_y = footer.rect['y']
+ActionChains(driver)\
+    .scroll_by_amount(0, delta_y)\
+    perform()
+
+3.Scroll from an element by a given amount
+This scenario is effectively a combination of the above two methods
+To execute this use the "Scroll From" method, whic takes 3 arguments. The first
+represents the origination point, which we designate as the element, and the
+second two are the delta x and delta y values.
+If the element is out the viewport, it will be scrolled to the bottom of the
+screen, then the page will be scrolled by the provided delta x and delta y values.
+
+iframe = driver.find_element(By.TAG_NAME, "iframe")
+scroll_origin = ScrollOrigin.from_element(iframe)
+ActionChains(driver)\
+    .scroll_from_origin(scroll_origin, 0, 200)\
+    .perform()
+
+4.Scroll from an element with an offset
+This scenario is used when you need to scroll only a portion of the screen, and
+it is outsice the viewport. Or is inside the viewport and the portion of the
+screen that must be scrolled is a known offset away from a specific element.
+This uses the "Scroll From" method again, and in addition to specifying the
+element, an offset is spesified to indicate the origin point of the scroll. The
+offset is calculated from the center of the provided element.
+If the element is out of the viewport, it first will be scrolloed to the bottom
+of the screen, then the origin will be determined by adding the offset to the
+coordinate of the center of the element, and finally the page will be scrolled by
+the provided delta x and delta y values.
+Note that if the offset from the center of the element falls outside of the
+viewport, it will result in an exception.
+
+footer = driver.find_element(By.TAG_NAME, "footer")
+scroll_origin = ScrollOrigin.from_element(footer, 0, -50)
+ActionChains(driver)\
+    .scroll_from_origin(scroll_origin, 0, 200)\
+    .perform()
+
+5.Scroll from a offset of origin(element) by given scroll_by_amount
+The final scenario is used whet you need to scroll only a portion of the screen,
+and it is already inside the viewport.
+This uses the "Scroll From" method again, but the viwport is designated instead
+of an element. An offset is specified from the upper left corner of the current
+viewport. After the origin point is determined, the page will be scrolled by the
+provided delta x and delta y values.
+Note that if offset from the upper left corner of the viewport falls outside of
+the screen, it will result in an exception.
+
+scroll_origin = ScrollOrigin.from_viewport(10, 10)
+ActionChains(driver)\
+    .scroll_from_origin(scroll_origin, 0, 200)\
+    .perform()

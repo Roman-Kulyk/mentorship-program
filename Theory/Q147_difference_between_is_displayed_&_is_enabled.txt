@@ -1,0 +1,19 @@
+Boolean is_selected()
+This method determines if and element is selected or not. It returns True if the
+element is selected and False if it is not. It is widely used on check boxes,
+radio buttons and options in a select.
+
+element.is_selected()
+
+Boolean is_enabled()
+This method determines if an element is is enabled or not. It returns True if
+elemnt is enabled and False if otherwise.
+
+element.is_enabled()
+
+Boolean is_displayed()
+This method determines if an element is displayed on the screen or not i.e.
+whether its width and height are greater than zero, it isn't hidden byb CSS, etc
+It returns True iff the element is displayed and False if it is not.
+
+element.is_displayed()

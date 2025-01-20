@@ -1,0 +1,83 @@
+1. Abastraction - means we focus on the essential qualities of something rather
+than one specific example. By using abastraction, we automatically discard what's
+unimportant or irrelevant. Abstraction means the idea or concept of a person is
+completely separate from any specific instance. And because I always want to
+discard what's unimportant, it's never just, what does a person class look like?
+It's, what should a person class look like for this application? Under these
+circumstances, at this time.
+
+2. Polymorphism - means having many forms.
+
+Dynamic or run-time polymorphism, allows us to access methods using the same
+interface on different types of object that may implement thos methods in
+different ways.
+Think of basic coffee maker as a class with a method brew coffee. The input
+parameters for that brew methos are a scoop of ground coffee beans and a water.
+French press also has a brew method with the exact same inputs and outputs, the
+way that they brew is very different.
+***Defining different classes that can be used with the same interface.***
+
+Static or compile-time polymorphism. It uses an overloading method. overloading
+allows you to implement multiple methods within a class that have the same name,
+but a different set of input parameters. If I give the brew methos of the French
+press, coffee and water as input arguments, I'll get back a cup of coffee. But If
+I change the type of inputs, from coffee and water to tea leaves and water, that's
+a different set of parameters so the French press will execute the different
+version of the brew method that gives me back a cup of hot tea. 
+***Overloading a method from the same class than can take different sets of
+parameters.****
+
+3. Encapsulation - the idea of encapsulation is about containing the elements of
+an object. We bundle an object's attribute or data along with the methods that
+operate on that data within the same unit or the same class. One reason for
+doing that is to restrict access to some of the object's components. One of the
+principles ofencapsulation is that an object should not make anything about
+itself available except what is absolutely necessary for other parts of the
+application to work. One of the benefits with object orientation is that it
+allows us to more safely change the way the object works without changing the
+rest of application. It's about reducing dependencies between different parts of
+the applicaion.
+
+4. Inheritance enables a new class to receive or inherit the attributes and
+methods of existing classes using the same implementation whic is a great form
+of code reuse. It means the new class automatically gets everything in the parent
+(super) class. All of it's attributes and behavior's without having to write any
+extra code.
+
+***Classes***
+A class is the detailed description, the definition, the template of what an
+object will be. But it isn't the object itself. Once we've written a class and
+defined it we can use it to create as many object based on that class as we
+want.
+Each class has a name, attributes to describe that object, and it can have
+behaviours, the things that object can do.
+
+***Methods***
+Are basically functions with the key difference that methods are
+defined as part of class. So they're included in any object in that class. And,
+since methods exist as part of an object, they can only access data that is known
+to that object.
+
+***Object***
+An object is an instance of a class. We need to create an object(or instance) of
+the class to use them. In simple terms, they are the actual world entities that
+have a state and behavior.
+
+***Super Class***
+Is a class from which another classes inheret from their attributes and methods.
+
+***Magic Methods***
+A method  that is called implicitly by Python to execute a certain operation on
+a type, such as addition. Such methods have names starting and ending with double
+underscores.
+
+***Procedure***
+a pre-defined data structure that can be called upon at any point in a program.
+It can take arguments but does not return a value.
+
+***Function***
+a pre-defined data structure that can be called upon at any point in a program.
+It can take parameters and does return a value.
+
+***Interpolation***
+the estimation of intermediate value between the precise data points.

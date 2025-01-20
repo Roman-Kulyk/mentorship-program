@@ -1,0 +1,33 @@
+CRUD operations are the cornerstone of application functionality, touching
+every aspect of how apps store, retrieve, and manage date. 
+
+CREATE: This is about adding new entries to your database. But it's also
+applicable to other types of persistent storage, such as files or networked
+services. When you perform a create operation, you're initiating a journey
+for a new piece of data within your system.
+
+READ: Through reading, you retrieve or view existing database entries. This
+operation is as basic as checking your email or reloading a website. Every 
+piece of inforamtion you get has been received from a database, thanks to 
+rease operation.
+
+UPDATE: Updating allows you to modify the details of data already in the
+database. For example, when you update a profile picture or edit a chat message.
+Each time, there's an update operation at work, ensuring your new data is stored
+in the database.
+
+DELETE: Deleting removes existing entries from the database. Whether you're
+closing an account or removing a post, delete operations ensure that unwanted
+or unnecessary data can be properlly discarded.
+
+What are CRUD operations in SQL?
+Create      INSERT
+Read        SELECT 
+Update      UPDATE
+Delete      DELETE
+
+What are CRUd operations in HTTP request method?
+Create      POST
+Read        GET
+Update      PUT or PATCH
+Delete      DELETE

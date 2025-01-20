@@ -1,0 +1,50 @@
+https://www.browserstack.com/guide/python-selenium-select-dropdown
+The 'dropdown' is a navigation element of a website. It permits a selection of
+one or more than one option from a list. It's an HTML element; you can use it in
+registration forms, search filter features, NavBar, etc.
+
+The Need for a Dropdown
+- The main advantage of using a dropdown is that it saves your apps/web pages
+from unnecessary space consumption by containing all the options within it.
+- It eliminates the problems like mistyping, misspelling, or wrong input from
+the users.
+- It helps find particular content on a weg page without scrolling up and down.
+- Save user's time on a large website. You can access your targeted content
+without wasting any time.
+- It sets the limit of options to choose from and helps users easily navigate.
+- Preserve screen space from unwanted content.
+- Also helps to navigate to another page.
+
+How to Select Option in Dropdown using Selenium python
+The Select class in Selenium id used to handle dropdown. Selenium WebDriver
+provides a class named 'Select'. You need to import the Select class from it.
+
+There are multiple methods to select/deselect dropdowns in Selenium python. 
+They are:
+
+select_by_index(int index)/deselect_by_index(int index)
+Index value are started from 0 and continue with an increment of +1. It means
+if there are five dropdown values then they will be 0,1,2,3, and 4.
+
+select_by_value(String text)/deselect_by_value(String text)
+You have to pass a text as a parameter to select_by_value.  Then it will match
+the value attribute text so that the user can click the dropdown value for which
+it becomes matched.
+
+select_by_visible_text(String text)/deselect_by_visible_text(String text)
+When you pass a text as a parameter to select_by_visible_text, it will match
+with the visible text attribute so that you can click the dropdown value for
+which it becomes matched.
+
+Test Multiple-Select dropdown
+options()
+Returns all the options from the dropdown
+
+first_selected_option()
+Returns the first selected option from the dropdown.
+
+all_selected_options()
+Returns all selected options.
+
+deselect_all()
+Clears all the selected options.

@@ -1,0 +1,19 @@
+Generator expressions allow you to quickly create a generator object in just a
+few lines of code. You can create them without building and holding the entire
+object in memory before iteration. In other words, you'll have no memory penalty
+when you use generator expressions.
+
+Generator is a great way to optimize memory.
+If speed is an issue and memory isn't then a list comprehension is likely a
+better tool for the job.
+
+new_gen = (expression for member in iterable)
+
+>>>nums_squared_gc = (num ** 2 for num in range(5))
+
+>>>nums_squared_gc
+
+<generator object <genexpr> at 0x107fbbc78>
+
+The output confirms that you've created a generator object and that it is distinct
+from a list.

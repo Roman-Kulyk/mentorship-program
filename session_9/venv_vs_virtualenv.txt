@@ -1,0 +1,34 @@
+Virtual environments are a self-contained directory tree that contais a Python
+installation for particular version of Python, plus a number of additional
+packages. Different applications can use different virtual environments.
+
+venv - is the module used toe create and manage virtual environments.
+venv usually install the most recent version of Python that you have available.
+To create a virtual environment, decide upon a directory where you want to place
+it, and run the venv module as a script with the directory path:
+
+python -m tutorial-env
+
+This will create the tutorial-env directory if it doesn't exist, and also create
+directories inside it containing a copy of the Python interpreter and various
+supporting files.
+
+Once you've created a virtual environment, you may activate it.
+On Windows, run:
+tutorial-env\Scripts\activate
+On Unix, run:
+source tutorial-env/bin/activate
+
+Activating the virtual environment will change your shell's prompt to show what
+virtual environment you're using.
+
+To deactivate a virtual environment, type in terminal:
+
+deactivate
+
+
+Traditionally virtualenv has been the library used to create virtual environments
+for python. However, starting python3.3, module venv has been added to python
+standard library and can be used as drop-in replacement for virtualenv. if older
+version of python is being used, then virtualenv is the way to go.
+Appart from some small differences, venv and virtualenv work similarly.

@@ -1,0 +1,29 @@
+A RACE CONDITION is an undesirable situation that occurs when a device or system
+attempts to perform two or more operations at the same time, but because of the
+nature of the device or system, the operations must be done in the proper
+sequence to be done correctly.
+
+They occur when two computer program processes, or threads, attempt to access the
+same resource at the same time and cause problems in the system.
+Race conditions are considered a common issue for multithreaded applications.
+
+Types of race condition:
+A critical race condition will cause the end state of the device, system or
+program to change. In software, a critical race condition is when a situation
+results in a bug with unpredictable or undefined behavior.
+
+A noncritical race condition does not directly affect the end state of the
+system, device or program.In software, a noncritical race condition does not
+result in a bug.
+
+How to indentify race condition
+Detecting and indentifying race condition is considered difficult. They are
+semantic problems that can arise from many possible flaws in code. It's best
+to design code in a way that prevents these problems from the start. Programmers
+use dynamic and static analysis tools to indentify race conditions.
+
+How do you prevent race conditions?
+Two ways programmers can prevent race conditions in operating systems and other
+software include:
+- Avoid shared states
+- Use thread synchronization

@@ -1,0 +1,44 @@
+
+The process of dividing a computher file, such as a data file of executable
+program file, into fragments that are stored in different parts of a computer's
+storage medium, such as its hard disc or RAM, is known as fragmentation in
+computing.
+When a file is fragmented, it is stored on the storage medium in non-contigious
+blocks, which means that the blocks are not stored next to each other.
+
+What is Fragmentation in Operating System?
+An umwanted problem with operating system is fragmentation, which occurs when 
+processes load and unload from memory and divide available memory. Because memory
+blocks are so small, they cannot be assigned to processes, and thus remain idle.
+It's also important to realize that programs create free space or holes in
+memory when they are loaded and unloaded. Because additional processes cannot be
+assigned to these little pieces, memory is used inefficiently.
+The memory allocation scheme determines the fragmentation circumstances. These 
+regions of memory become fragmented when the process loads and unloads from it,
+making it unusable for incoming processes. We refer to it as fragmentation.
+
+Cause of Fragmentation
+This can happen when a file is too large to fit into a single contiguous block
+of free space on the storage medium, or when the blocks of free space on the
+medium are insufficient to hold the file. Because the system must search for and
+retrieve individual fragments from different locations in order to open the file,
+fragmentation can cause problems when reading or accessing the file.
+
+Effect of Fragmentation
+This can reduce system performance and make it more difficult to access the file.
+It is generally best to defragment your hard disc on a regular basis to avoid
+fragmentation, which is a process that rearranges the block of data on the disc 
+so that files are stored in contigious blocks and can be accessed more quickly.
+
+Types of Fragmentation
+- Internal Fragmentation - occurs when there is unused space within a memory
+block.
+- External Fragmentation - occurs when a storage medium, such as a hard disc or 
+solid-state drive, has many small blocks of free space scattered thoughout it.
+
+How Fragmentation in Operating System affects the system?
+- Slower performance
+- Disc space wasting
+- Data loss
+- Increased risk of system crashes
+- Reduced battery life

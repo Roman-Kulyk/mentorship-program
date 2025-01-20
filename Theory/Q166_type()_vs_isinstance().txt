@@ -1,0 +1,23 @@
+Type() vs Isinstance() in Python
+One of the maind defferentiating factors between type() and isinstance() it that
+type() function is not capable of checking whether an object is an isinstance of 
+a parent class, whereas isinstance() function is capable of doing so.
+In other words, isinstance() supports inheritance, whereas type() doesn't.
+
+type()
+1. Takes one or three arguments
+2. Returns the type or class of the argument in case a single argument is passed.
+Returns a new type object if three arguments are passed.
+3. It either takes an object as an argument or class name, base class, and dict
+as arguments.
+4. We can use it to find out the class of an object.
+5. type(pythonObject)
+   type(className, baseClass, dict)
+
+isinstance()
+1. Takes two arguments.
+2. Returns true if the object provided as an argument to it belongs to the class
+passed as argument. Else, returns False.
+3. It takes an object and class as arguments.
+4. We can use it to check if an object belongs to a particular class or not.
+5. isinstance(pythonObject, className)

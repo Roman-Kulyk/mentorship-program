@@ -1,0 +1,11 @@
+To select the immediate next sibling element, you can use the folloving XPath
+syntax:
+
+xpath_expression/following-sibling::tagName[1]
+
+The [1] ensures that only the immediate next sibling is selected.
+
+You can add conditions to your XPath expression to filter the sibling elements
+based on their attributes, text, or other characteristics.
+
+xpath_expression/following-sibling::tagName[@attribute = 'value']

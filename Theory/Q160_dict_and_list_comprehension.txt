@@ -1,0 +1,47 @@
+Leverage List Comprehension
+
+Rather than creating an empty list and adding each element to the end, you simply
+define the list and its contents at the same time by following this format:
+
+new_list = [expression for member in iterable]
+
+Every list comprehension in Python includes three elements:
+1. expression is the member itself, a call to a method, or any other valid
+expression that returns a value.
+2. member is the object or value in the list of iterable.
+3. iterable is a list, set, sequence, generator, or any other object that can 
+return its elements one at a time.
+
+squares = [number * number for number in range(10)]
+squares
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+Filter Values From a List
+
+new_list = [expression for member in iterable if conditional]
+
+Conditionals are important because they allow list comprehension to filter out
+unwanted values, which would normally require a call to filter():
+
+sentence = 'the rocket came back from mars'
+[char for char in sentence if char in 'aeiou']
+['e', 'o', 'e', 'a', 'e', 'a', 'o', 'a']
+
+A set comprehension is almost exactly the same as a list comprehension in Python.
+The difference is that set comprehensions make sure the output contains no
+duplicates. You can create a set comprehension by using curly braces instead of
+brackets.
+
+quote = 'life, uh, finds a way'
+{char for char in quote if char in 'aeiou'}
+{'a', 'e', 'u', 'i'}
+Unlike lists, sets don't guaranee that items will be saved in any particular
+order.
+
+Dictionary comprehension are similar, with the additional requirement of
+defining a key:
+{number: number * number for number in range(10)}
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+To create the dictionary, you use curly braces {} as well as a key-value particular
+(number: number * number) in your expression.

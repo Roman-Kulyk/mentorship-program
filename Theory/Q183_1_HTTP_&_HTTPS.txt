@@ -1,0 +1,127 @@
+Q_183_Part_1 
+HTTP(HTTP basics, HTTP vd HTTPS, HTTP requests types, responce codes)
+
+Hypertext Transfer Protocol (HTTP) is an application-layer protocol for
+transmitting hypermedia documents, such as HTML. It was designed for
+communication between web browsers and web servers, but it can also be used for
+other purposes. HTTP follows a classical client-server model, with a client
+opening a connection to make a request, then waiting until it receives
+a response. HTTP is a stateless protocol, meaning that the server does not keep
+any data (state) between two requests.
+
+The client–server model is a distributed application structure that partitions
+tasks or workloads between the providers of a resource or service, called
+servers, and service requesters, called clients.[1] Often clients and servers
+communicate over a computer network on separate hardware, but both client and
+server may reside in the same system. A server host runs one or more server
+programs, which share their resources with clients. A client usually does not
+share any of its resources, but it requests content or service from a server.
+Clients, therefore, initiate communication sessions with servers, which await
+incoming requests. Examples of computer applications that use the
+client–server model are email, network printing, and the World Wide Web. 
+
+Components of HTTP-based systems
+
+1. Client: the user-agent
+The user-agent is any tool that acts on behalf of the user. This role is
+primarily performed by the Web browser, but it may also be performed by
+programs used by engineers and Web developers to debug their applications. 
+
+2. The Web server
+On the opposite side of the communication channel is the server, which serves
+the document as requested by the client. A server appears as only a single
+machine virtually; but it may actually be a collection of servers sharing the
+load (load balancing), or other software (such as caches, a database server,
+or e-commerce servers), totally or partially generating the document on demand.
+
+3. Proxies
+Between the Web browser and the server, numerous computers and machines relay
+the HTTP messages. Due to the layered structure of the Web stack, most of these
+operate at the transport, network or physical levels, becoming transparent at
+the HTTP layer and potentially having a significant impact on performance.
+Those operating at the application layers are generally called proxies. 
+
+Basic aspects of HTTP
+
+1. HTTP is simple
+HTTP is generally designed to be simple and human-readable, even with the added
+complexity introduced in HTTP/2 by encapsulating HTTP messages into frames. HTTP
+messages can be read and understood by humans, providing easier testing for
+developers, and reduced complexity for newcomers.
+
+2. HTTP is extensible
+Introduced in HTTP/1.0, HTTP headers make this protocol easy to extend and
+experiment with. New functionality can even be introduced by a simple agreement
+between a client and a server about a new header's semantics.
+
+3. HTTP is stateless, but not sessionless
+HTTP is stateless: there is no link between two requests being successively
+carried out on the same connection. This immediately has the prospect of being
+problematic for users attempting to interact with certain pages coherently, for
+ example, using e-commerce shopping baskets. But while the core of HTTP itself
+ is stateless, HTTP cookies allow the use of stateful sessions. Using header
+extensibility, HTTP Cookies are added to the workflow, allowing session creation
+on each HTTP request to share the same context, or the same state.
+
+4. HTTP and connections
+A connection is controlled at the transport layer, and therefore fundamentally
+out of scope for HTTP. HTTP doesn't require the underlying transport protocol
+ to be connection-based; it only requires it to be reliable, or not lose
+messages (at minimum, presenting an error in such cases). Among the two most
+common transport protocols on the Internet, TCP is reliable and UDP isn't.
+HTTP therefore relies on the TCP standard, which is connection-based. 
+
+HTTP flow
+
+1. Open a TCP connection: The TCP connection is used to send a request, or
+several, and receive an answer.
+
+2. end an HTTP message: HTTP messages (before HTTP/2) are human-readable.
+With HTTP/2, these simple messages are encapsulated in frames, making them
+impossible to read directly, but the principle remains the same.
+
+3. Read the response sent by the server.
+
+4. Close or reuse the connection for further requests.
+
+HTTP caching
+Overview
+
+The HTTP cache stores a response associated with a request and reuses the stored
+response for subsequent requests.
+There are several advantages to reusability. First, since there is no need to
+deliver the request to the origin server, then the closer the client and cache
+are, the faster the response will be. The most typical example is when the
+browser itself stores a cache for browser requests.
+ 
+Also, when a response is reusable, the origin server does not need to process
+the request — so it does not need to parse and route the request, restore the
+session based on the cookie, query the DB for results, or render the template
+engine. That reduces the load on the server.
+
+Proper operation of the cache is critical to the health of the system.
+
+Using HTTP cookies
+A cookie (also known as a web cookie or browser cookie) is a small piece of data
+a server sends to a user's web browser. The browser may store cookies, create
+new cookies, modify existing ones, and send them back to the same server with
+later requests. Cookies enable web applications to store limited amounts of data
+and remember state information; by default the HTTP protocol is stateless.
+
+HTTPS
+
+HTTPS (HyperText Transfer Protocol Secure) is an encrypted version of the HTTP
+protocol. It uses TLS to encrypt all communication between a client and
+a server. This secure connection allows clients to safely exchange sensitive
+data with a server, such as when performing banking activities
+or online shopping.
+
+Transport Layer Security (TLS)
+
+Transport Layer Security (TLS), formerly known as Secure Sockets Layer (SSL),
+is a protocol used by applications to communicate securely across a network,
+preventing tampering with and eavesdropping on email, web browsing, messaging,
+and other protocols. Both TLS and SSL are client / server protocols that
+ensure communication privacy by using cryptographic protocols to provide
+security over a network. When a server and client communicate using TLS,
+it ensures that no third party can eavesdrop or tamper with any message.
