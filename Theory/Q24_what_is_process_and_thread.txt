@@ -1,0 +1,20 @@
+Process and threads are the basic components in OS. Process is a program under
+execution whereas a thread is part of process. Threads allowa a program to
+perform multiple task simultaniously, like downloading a file while you browse
+a website or running animations while processing user input. A process can
+consist of multiple threads.
+
+What is Process?
+Processes are basically the programs that are dispatched from the ready state
+and are scheduled in the CPU for execution. A process can create other Processes
+which are known as Child Processes. The process takes more time to terminate,
+and  it is isolated means it does not share the memory with any other process.
+The process can have the following states new, ready, running, waiting,
+terminated and suspended.
+
+What is Thread?
+Threads are often called "lightweight process" because they share some features
+of processes but are smaller and faster. Each thread is always part of one
+specific process. A thread- has three states: Running, Ready and Blocked.
+A thread  takes less time to terminate as compared to the process but unlike the 
+process, threads do not isolate.
