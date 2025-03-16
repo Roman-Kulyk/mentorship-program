@@ -1,0 +1,4 @@
+@property decorator is a built-in decorator in Python which is helpful in defining 
+the properties effortlessly without manually calling the inbuilt function property(). 
+Which is used to return the property attributes of a class from the stated 
+getter, setter and deleter as parameters.
