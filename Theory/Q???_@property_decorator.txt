@@ -1,4 +1,33 @@
-@property decorator is a built-in decorator in Python which is helpful in defining 
-the properties effortlessly without manually calling the inbuilt function property(). 
-Which is used to return the property attributes of a class from the stated 
-getter, setter and deleter as parameters.
+The @property decorator simplifies the management of attributes in your Python classes. It allows you to control attribute access, enabling features such as data validation, lazy evaluation, and the creation of backward-compatible APIs without modifying the class’s public interface. By using @property, you can avoid the clutter of getter and setter methods, keeping your code clean and Pythonic.
+- A property in Python is a tool for creating managed attributes in classes.
+- The @property decorator allows you to define getter, setter, and deleter methods for attributes.
+- You use properties when you need controlled access or want to encapsulate logic without changing the API.
+- Properties are useful for validating data, computing attributes, and creating read-only or read-write attributes.
+- You should avoid @property when direct access is sufficient or performance is critical.
+
+Python’s property() can work as a decorator, so you can use the @property syntax to create your properties quickly:
+class Circle:
+    def __init__(self, radius):
+        self._radius = radius
+
+    @property
+    def radius(self):
+        """The radius property."""
+        print("Get radius")
+        return self._radius
+
+    @radius.setter
+    def radius(self, value):
+        print("Set radius")
+        self._radius = value
+
+    @radius.deleter
+    def radius(self):
+        print("Delete radius")
+        del self._radius
+
+Here’s a recap of some important points to remember when you’re creating properties with the decorator approach:
+- The @property decorator must decorate the getter method.
+- The docstring must go in the getter method.
+- The setter and deleter methods must be decorated with the name of the getter method plus .setter and .deleter, respectively.
+
