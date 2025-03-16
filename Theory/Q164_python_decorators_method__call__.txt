@@ -17,3 +17,15 @@ such as the self argument for instance methods.
 Class decorators are used to modify or enhance the behavior of a class.
 Like function decorators, class decorators are applied to the class definition.
 They work by taking the class as an argument and returning a modified version of the class.
+
+__call__
+method enables Python programmers to write classes where the instances behave like functions and
+can be called like a function. When the instance is called as a function; if this method is defined,
+x(arg1, arg2, ...)
+is a shorthand for
+x.__call__(arg1, arg2, ...)
+Common use cases for the __call__ method include:
+- Function Objects: Creating objects that can be called like functions. For example, creating a function that maintains state across calls.
+- Decorators: Implementing decorators as classes where __call__ defines the wrapping logic.
+- Callbacks: Defining objects that act as callbacks or handlers.
+- Command Pattern: Encapsulating commands and actions within objects that can be executed with a call.
