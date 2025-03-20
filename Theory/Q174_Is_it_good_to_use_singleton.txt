@@ -1,0 +1,12 @@
+Singleton Design Pattern is one of the easiest and straightforward patterns to
+be implemented in an automation framework. This design is used when we need to
+use the same object of a class across the automation framework. It restricts the
+instantiation of a class to a single instance. 
+
+Steps to follow to create singleton class:
+
+    - Declare the constructor of the class as ‘private’ so that no one can
+      instantiate the class outside of it
+    - Declare a static reference variable of class
+    - Declare a static method with return type as an object of this singleton
+      class which should check if the class is already instantiated once.

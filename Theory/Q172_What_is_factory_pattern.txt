@@ -1,0 +1,13 @@
+Factory Design Pattern is one of the most used creational patterns as it
+provides one of the best ways to create  an object. The term factory here means
+that there should be a class with a factory method which deals with all the
+creational stuff. 
+
+In this pattern, there is a superclass with multiple subclasses and based on the
+user input at test class level, it returns one of the subclasses. In other
+words, it is used to create an object from one of the possible classes that
+extends a common parent class/ implements an interface. The instantiation logic
+would be the responsibility of the class that is extending the parent class
+thereby it hides the complex code at test level. As a user, we just need to
+create an object of this class and use it in the test class to call the
+appropriate method holding the business logic.
