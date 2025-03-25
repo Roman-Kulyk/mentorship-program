@@ -1,0 +1,49 @@
+The Builder Design Pattern is a creational pattern used in software design to
+construct a complex object step by step. It allows the construction of a product
+in a step-by-step manner, where the construction process can change based on the
+type of product being built. This pattern separates the construction of a complex
+object from its representation, allowing the same constructino process to create
+different representations.
+
+Components of the Builder Design Pattern
+1.Product 
+2.Builder
+3.ConcretBuilder
+4.Director
+5.Client
+
+Steps to implement Builder Design Pattern
+1.Create the Product Class: Define the object(product) that will be built. This
+class contains all the fields that make up the object.
+
+2.Create the Build Class: This class will have methods to set the different parts
+of the product. Each method returns the builder itself to allow method chaining.
+
+3.Add a Build Method: In the builder class, add a method called build()
+(or similar) that assembles the product and returns the final object.
+
+4.Use the Director(Optional): If needed, you can create a director class to
+control the building process and decide the order in which parts are constructed.
+
+5.Client Uses the Builder: The client will use the builder to set the desired
+parts step by step and call the build() method to get the final product.
+
+When to use Builder Design Pattern?
+The Builder design pattern is used when you need to create complex objects with
+a large number of optional components or configuration parameters. This pattern
+is particularly useful when an object needs to be constructed step by step, some
+of the scenarios where the Builder design pattern is beneficial are:
+-Complex Object Construction: When you have an object with many optional
+componetns or configurations and you want to provide a clear separation between
+the construction process and the actual representation of the object.
+-Step-by-Step Construction: When the construction of an object involves a step-by-
+step process where different configurations or options need to be set at
+different stages.
+-Avoiding constructors with multiple parameters: When the number of parameters in
+a constructor becomes too large, and using telescoping constructors (constructors
+with multiple parameters) becomes unwieldy and error-prone.
+-Configurable Object Creation: When you need to create objects with different
+configurations or variations, and you want a more flexible and readable way to
+specigy these configurations.
+-Common Interface for Multiple Representation: When you want to provide a common
+interface for constructing different representations of an object.
