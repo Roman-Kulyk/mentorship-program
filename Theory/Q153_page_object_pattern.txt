@@ -1,0 +1,22 @@
+Page Object Model also known as POM is the most popular structural design pattern in web/mobile automation.
+When working in an Agile environment we should always be ready to implement changes in the software and
+ultimately in the automation code base. When any requirement is changed/deleted/added we need to update
+automation code as well to keep it up and running. If any element is changed in one webpage which is used
+by 20 test class files in the automation framework, we need to update at 20 different places if POM is not
+followed.
+POM simplifies this and help to update at one single location which will be used by those 20 different test
+class files.
+
+In this design pattern weg pages are represented as classes. Web page elements are defined as variables and
+user interactions are definded as methods such as login(String username, String password).
+Test classes use methods of these page classes whenever it needs to interact with the UI of the page with the
+help of the object of the respective page class. If any element is updated in any page, we just need to update
+the locator/method of that page class only.
+Page Object is a class that represents a web page and holds the web page elements and action methods. Page
+Factory is a way to initialisw the web elements we want to interact with within the page object when you create
+an instance of it.
+Step 1 Create a base class and add driver initialization, and launch URL code inside init() method.
+Step 2 Create HomePage, LoginPage, and SearchPage. Add consturctor, locators and methods which test cases can
+use to interact with the UAT.
+Step 3 Create LogintEst and create objects of required POM classes and use it to call methods of respective
+POM classes to perform valid login scenario.
