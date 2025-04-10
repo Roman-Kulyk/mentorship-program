@@ -1,7 +1,4 @@
-To select all sibling for element, you can use the folloving XPath
-syntax:
+To get all the sibling elements of a given element in Selenium Python, call the find_elements() method on the given element and pass By.XPATH for by parameter, and 'following-sibling::* | preceding-sibling::*' for the value parameter in the function call.
 
-xpath_expression/following-sibling::tagName
-
-The following-sibling axes selects all sibling next to current context node.
-Siblings are at the same level of the current context under the same parents.
+If myelement is the WebElement object for which we would like to find the sibling elements, the code snippet for find_elements() method is:
+myelement.find_elements(By.XPATH, "following-sibling::* | preceding-sibling::*")
