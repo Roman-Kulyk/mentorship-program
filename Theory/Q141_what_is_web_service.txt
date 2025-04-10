@@ -1,0 +1,17 @@
+A web service is a software system with open protocols that has a unique URL address and maintains 
+communication between two applications via the internet. Being platform and technology independent, 
+a web service acts as a mediator that can connect all types of applications across the web regardless 
+of the programming language they are written in. For instance, Java applications can be connected to 
+.NET applications. Such compatibility is possible due to open standards of web services, while the 
+communication happens via the data exchange formats XML/JSON and the protocols of web communication 
+HTTP/HTTPS.
+There are two main components of such communication: client (a service consumer) and server 
+(a service provider). Usually, a client requests the server to get or save the data. Let’s say you 
+want to find some place on Google Maps from your mobile phone. In this case, the application on your 
+mobile device is a client while Google Maps service is a server that returns the required data 
+(specific location) upon your request.
+
+Companies actively use web services for common tasks, for instance, when integrating payments to 
+their platforms or while registering users on a new website via Facebook or Google credentials. 
+Asking Siri or Alexa the weather forecast and using Google Maps are other examples of web services 
+in a day-to-day routine.
