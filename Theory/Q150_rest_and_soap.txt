@@ -1,0 +1,39 @@
+SOAP
+REST
+
+Stands for 
+Simple Object Access Protocol
+Representational State Transfer
+
+What is it?
+SOAP is a protocol for communication between applications
+REST is an architecture style for designing communication interfaces.
+
+Design
+SOAP API exposes the operation.
+REST API exposes the data.
+
+Transport Protocol
+SOAP is independent and can work with any transport protocol.
+REST works only with HTTPS.
+
+Data format
+SOAP supports only XML data exchange.
+REST supports XML, JSON, plain text, HTML.
+
+Performance
+SOAP messages are larger, which makes communication slower.
+REST has faster performance due to smaller messages and caching support.
+
+Scalability
+SOAP is difficult to scale. The server maintains state by storing all previous messages exchanged with a client.
+REST is easy to scale. It’s stateless, so every message is processed independently of previous messages.
+
+Security
+SOAP supports encryption with additional overheads.
+REST supports encryption without affecting performance.
+
+Use case
+SOAP is useful in legacy applications and private APIs.
+REST is useful in modern applications and public APIs.
+
