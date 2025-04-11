@@ -1,4 +1,7 @@
-The @property decorator simplifies the management of attributes in your Python classes. It allows you to control attribute access, enabling features such as data validation, lazy evaluation, and the creation of backward-compatible APIs without modifying the class’s public interface. By using @property, you can avoid the clutter of getter and setter methods, keeping your code clean and Pythonic.
+The @property decorator simplifies the management of attributes in your Python classes. 
+It allows you to control attribute access, enabling features such as data validation,
+lazy evaluation, and the creation of backward-compatible APIs without modifying the class’s public interface. 
+By using @property, you can avoid the clutter of getter and setter methods, keeping your code clean and Pythonic.
 - A property in Python is a tool for creating managed attributes in classes.
 - The @property decorator allows you to define getter, setter, and deleter methods for attributes.
 - You use properties when you need controlled access or want to encapsulate logic without changing the API.
