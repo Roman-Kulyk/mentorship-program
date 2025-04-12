@@ -1,3 +1,4 @@
+https://refactoring.guru/design-patterns/singleton
 Singleton Design Pattern is one of the easiest and straightforward patterns to
 be implemented in an automation framework. This design is used when we need to
 use the same object of a class across the automation framework. It restricts the
