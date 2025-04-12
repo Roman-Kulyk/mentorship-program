@@ -18,6 +18,14 @@ you might want to use __init__ to:
 -Set the object's attributes.
 -Call the objects superclass' __init__ methos.
 -Perform other initialization tasks.
+
+Differences Between __init__ and __new__:
+__init__ is an instance method, while __new__ is a static method.
+__new__ is responsible for creating and returning a new instance (object), 
+while __init__ is responsible for initializing the attributes of the newly created object.
+__new__ is called before __init__.
+__new__ happens first, then __init__.
+__new__ can return any object, while __init__ must return None.
 """
 # https://builtin.com/data-science/new-python
 
