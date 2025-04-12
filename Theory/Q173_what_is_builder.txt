@@ -1,3 +1,4 @@
+https://refactoring.guru/design-patterns/builder
 The Builder Design Pattern is a creational pattern used in software design to
 construct a complex object step by step. It allows the construction of a product
 in a step-by-step manner, where the construction process can change based on the
