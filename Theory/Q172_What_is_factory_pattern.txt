@@ -1,3 +1,4 @@
+https://refactoring.guru/design-patterns/factory-method
 Factory Design Pattern is one of the most used creational patterns as it
 provides one of the best ways to create  an object. The term factory here means
 that there should be a class with a factory method which deals with all the
