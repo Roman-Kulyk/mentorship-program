@@ -1,9 +1,9 @@
-"""List comprehension provide a concise way to create list. Common applications
+"""List comprehension provides a concise way to create a list. Common applications
 are to make new lists where each element is the result of some operations
 applied to each member of another sequence or iterable, or to create a
 subsequence of those elements that satisfy a certain condition.
 
-newlist = [EXPRESSIN for ITEM in ITERABLE if CONDITION == True]
+newlist = [EXPRESSION for ITEM in ITERABLE if CONDITION == True]
 
 A list comprehension consist of brackets containing an expression followed by a
 for clause, then zero or more for or if clause. The result will be a new list
