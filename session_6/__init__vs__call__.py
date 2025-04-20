@@ -1,6 +1,6 @@
-"""The '__init__'  method is usedd to initialize the object's attributes after
+"""The '__init__'  method is used to initialize the object's attributes after
 the object of the class is created.
--'__init__' is aspecial method in Python classes.
+-'__init__' is a special method in Python classes.
 -'__init__' is automatically called when you create a new instance of a class.
 - It enables you to set up the object according to your specific requirements
 during the object's creation.
