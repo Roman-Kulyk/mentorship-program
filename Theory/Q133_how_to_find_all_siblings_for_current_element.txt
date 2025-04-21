@@ -1,4 +1,7 @@
-To get all the sibling elements of a given element in Selenium Python, call the find_elements() method on the given element and pass By.XPATH for by parameter, and 'following-sibling::* | preceding-sibling::*' for the value parameter in the function call.
+To get all the sibling elements of a given element in Selenium Python, call the find_elements() 
+method on the given element and pass By.XPATH for by parameter, 
+and 'following-sibling::* | preceding-sibling::*' for the value parameter in the function call.
 
-If myelement is the WebElement object for which we would like to find the sibling elements, the code snippet for find_elements() method is:
+If myelement is the WebElement object for which we would like to find the sibling elements, 
+the code snippet for find_elements() method is:
 myelement.find_elements(By.XPATH, "following-sibling::* | preceding-sibling::*")
