@@ -1,3 +1,6 @@
-To get the next or following sibling element of a given element in Selenium Python, call the find_element() method on the given element and pass By.XPATH for by parameter, and 'following-sibling::*[1] for the value parameter in the function call.
-If myelement is the WebElement object for which we would like to find the next sibling element, the code snippet for find_element() method is:
+To get the next or following sibling element of a given element in Selenium Python, call the find_element() 
+method on the given element and pass By.XPATH for by parameter, and 'following-sibling::*[1] for the value 
+parameter in the function call.
+If myelement is the WebElement object for which we would like to find the next sibling element, the code 
+snippet for find_element() method is:
 myelement.find_element(By.XPATH, "following-sibling::*[1]")
